@@ -20,5 +20,9 @@ Standardize image dimensions, formats, and optimization techniques across the si
 
 ## Naming Conventions
 - Must be descriptive using keywords.
-- **Convention:** `keyword-modifier-location.webp` (e.g., `ai-consulting-dashboard-miami.webp`)
-- **Avoid:** Generic names like `image1.jpg` or `ScreenShot_2024.png`.
+- Use lowercase kebab-case only.
+- Prefer asset-family prefixes so filenames sort cleanly and remain predictable in `public/`.
+- **Canonical pattern:** `asset-family-subject-modifier.ext`
+- **Examples:** `logo-dark.svg`, `og-default.png`, `pillar-podcast-production.webp`, `persona-local-business.webp`
+- Use a location suffix only when the image is actually location-specific, such as `service-ai-consulting-miami.webp`.
+- **Avoid:** Generic names like `image1.jpg`, `hero-final-v2.jpg`, or `ScreenShot_2024.png`.
