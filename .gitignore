@@ -33,3 +33,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated local tooling output
+.sanity/
+AJ-DIGITAL-ASSET-AUDIT.html
