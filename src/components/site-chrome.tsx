@@ -2,8 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-
-const STANDALONE_PREFIXES = ["/applied-intelligence"];
+import { isStandaloneRoute } from "@/lib/standalone-routes";
 
 export default function SiteChrome({
   footer,
@@ -13,10 +12,7 @@ export default function SiteChrome({
   sticky: ReactNode;
 }) {
   const pathname = usePathname();
-  const isStandalone = STANDALONE_PREFIXES.some((prefix) =>
-    pathname.startsWith(prefix)
-  );
-  if (isStandalone) return null;
+  if (isStandaloneRoute(pathname)) return null;
   return (
     <>
       {sticky}

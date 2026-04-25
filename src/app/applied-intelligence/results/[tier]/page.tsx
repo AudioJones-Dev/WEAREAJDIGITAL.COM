@@ -72,17 +72,18 @@ export default async function ResultPage({
   searchParams,
 }: {
   params: Promise<{ tier: string }>;
-  searchParams: Promise<{ score?: string; name?: string }>;
+  searchParams: Promise<{ score?: string }>;
 }) {
   const { tier } = await params;
-  const { score: scoreParam, name: nameParam } = await searchParams;
+  const { score: scoreParam } = await searchParams;
 
   if (!VALID_TIERS.includes(tier as Tier)) notFound();
 
   const typedTier = tier as Tier;
   const page = config.result_pages[typedTier];
-  const score = scoreParam ? parseInt(scoreParam, 10) : null;
-  const firstName = nameParam ? decodeURIComponent(nameParam).split(" ")[0] : null;
+
+  const rawParsed = scoreParam !== undefined ? parseInt(scoreParam, 10) : NaN;
+  const score = !isNaN(rawParsed) ? Math.min(100, Math.max(0, rawParsed)) : null;
 
   return (
     <div className="min-h-screen bg-[#05070F] text-[#F8FAFC]">
@@ -118,7 +119,7 @@ export default async function ResultPage({
             </div>
           )}
           <h1 className="text-2xl font-semibold tracking-[-0.03em] text-white sm:text-3xl">
-            {firstName ? `${firstName}, ${page.headline}` : page.headline}
+            {page.headline}
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[#94A3B8]">
             {page.summary}

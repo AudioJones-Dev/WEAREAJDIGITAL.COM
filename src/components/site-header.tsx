@@ -5,14 +5,13 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { mainNavConfig } from "./nav-config";
 import MobileNav from "./mobile-nav";
-
-const STANDALONE_PREFIXES = ["/applied-intelligence"];
+import { isStandaloneRoute } from "@/lib/standalone-routes";
 
 export default function SiteHeader() {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const isStandalone = STANDALONE_PREFIXES.some((prefix) => pathname.startsWith(prefix));
+  const isStandalone = isStandaloneRoute(pathname);
 
   // Close dropdown on outside click
   useEffect(() => {

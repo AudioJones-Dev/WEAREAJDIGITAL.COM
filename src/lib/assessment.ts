@@ -33,7 +33,9 @@ export function calculateCategoryScores(
 }
 
 export function normalizeScore(rawScore: number, maxScore: number): number {
-  return Math.round((rawScore / maxScore) * 100);
+  if (maxScore <= 0) return 0;
+  const pct = (rawScore / maxScore) * 100;
+  return Math.round(Math.min(100, Math.max(0, pct)));
 }
 
 export function classifyTier(

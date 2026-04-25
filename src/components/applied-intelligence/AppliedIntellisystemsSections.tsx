@@ -89,7 +89,7 @@ export function AppliedIntellisystemsHero({
             href={config.hero.primary_cta.href}
             className="hidden rounded-full border border-[#1E293B] px-4 py-2 text-xs font-semibold text-[#94A3B8] transition hover:border-[#3B5BFF] hover:text-white sm:inline-flex"
           >
-            Start Diagnostic
+            {config.hero.primary_cta.label}
           </Link>
         </header>
 

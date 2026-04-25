@@ -96,6 +96,14 @@ function ProgressBar({ current, total }: { current: number; total: number }) {
 
 // ── Step: Lead Capture ────────────────────────────────────────────────────────
 
+const FIELD_PLACEHOLDERS: Record<string, string> = {
+  name: "Your name",
+  company: "Company name",
+  email: "you@company.com",
+  website: "https://yoursite.com",
+  phone: "+1 (555) 000-0000",
+};
+
 function LeadCaptureStep({
   config,
   onNext,
@@ -103,55 +111,45 @@ function LeadCaptureStep({
   config: AssessmentConfig;
   onNext: (data: LeadData) => void;
 }) {
-  const [form, setForm] = useState<LeadData>({
-    name: "",
-    company: "",
-    email: "",
-    website: "",
-    phone: "",
-  });
-  const [errors, setErrors] = useState<Partial<Record<keyof LeadData, string>>>({});
+  const fields = config.assessment.lead_capture;
+
+  const [form, setForm] = useState<Record<string, string>>(
+    Object.fromEntries(fields.map((f) => [f.id, ""]))
+  );
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = (): boolean => {
-    const next: typeof errors = {};
-    if (!form.name.trim()) next.name = "Name is required";
-    if (!form.company.trim()) next.company = "Company is required";
-    if (!form.email.trim()) next.email = "Email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) next.email = "Enter a valid email";
+    const next: Record<string, string> = {};
+    for (const field of fields) {
+      if (field.required && !form[field.id]?.trim()) {
+        next[field.id] = `${field.label} is required`;
+      }
+    }
+    const email = form.email ?? "";
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      next.email = "Enter a valid email address";
+    }
     setErrors(next);
     return Object.keys(next).length === 0;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) onNext(form);
+    if (!validate()) return;
+    onNext({
+      name: form.name ?? "",
+      company: form.company ?? "",
+      email: form.email ?? "",
+      website: form.website?.trim() || undefined,
+      phone: form.phone?.trim() || undefined,
+    });
   };
 
-  const field = (
-    id: keyof LeadData,
-    label: string,
-    type: string,
-    required: boolean,
-    placeholder: string
-  ) => (
-    <div>
-      <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-[#CBD5E1]">
-        {label} {required && <span className="text-[#3B5BFF]">*</span>}
-      </label>
-      <input
-        id={id}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        value={form[id] ?? ""}
-        onChange={(e) => setForm((p) => ({ ...p, [id]: e.target.value }))}
-        className="w-full rounded-2xl border border-[#1E293B] bg-[#05070F] px-4 py-3 text-sm text-[#F8FAFC] placeholder-[#94A3B8]/60 outline-none transition focus:border-[#3B5BFF] focus:ring-1 focus:ring-[#3B5BFF]"
-      />
-      {errors[id] && (
-        <p className="mt-1 text-xs text-red-400">{errors[id]}</p>
-      )}
-    </div>
-  );
+  // Pair fields into rows of 2 for compact desktop layout
+  const rows: (typeof fields)[] = [];
+  for (let i = 0; i < fields.length; i += 2) {
+    rows.push(fields.slice(i, i + 2));
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -161,19 +159,42 @@ function LeadCaptureStep({
           Let&apos;s start with a few quick details
         </h2>
         <p className="mt-3 text-[#94A3B8]">
-          Your answers stay private and are used only to personalize your constraint profile.
+          Your answers stay private and are used only to generate your constraint profile.
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        {field("name", "Name", "text", true, "Your name")}
-        {field("company", "Company", "text", true, "Company name")}
-      </div>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {field("email", "Email", "email", true, "you@company.com")}
-        {field("website", "Website", "url", false, "https://yoursite.com")}
-      </div>
-      {field("phone", "Phone", "tel", false, "+1 (555) 000-0000")}
+      {rows.map((row, rowIdx) => (
+        <div
+          key={rowIdx}
+          className={row.length === 2 ? "grid gap-4 sm:grid-cols-2" : ""}
+        >
+          {row.map((field) => (
+            <div key={field.id}>
+              <label
+                htmlFor={field.id}
+                className="mb-1.5 block text-sm font-semibold text-[#CBD5E1]"
+              >
+                {field.label}{" "}
+                {field.required && <span className="text-[#3B5BFF]">*</span>}
+              </label>
+              <input
+                id={field.id}
+                type={field.type}
+                required={field.required}
+                placeholder={FIELD_PLACEHOLDERS[field.id] ?? ""}
+                value={form[field.id] ?? ""}
+                onChange={(e) =>
+                  setForm((p) => ({ ...p, [field.id]: e.target.value }))
+                }
+                className="w-full rounded-2xl border border-[#1E293B] bg-[#05070F] px-4 py-3 text-sm text-[#F8FAFC] placeholder-[#94A3B8]/60 outline-none transition focus:border-[#3B5BFF] focus:ring-1 focus:ring-[#3B5BFF]"
+              />
+              {errors[field.id] && (
+                <p className="mt-1 text-xs text-red-400">{errors[field.id]}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
 
       <div className="pt-2">
         <PrimaryBtn type="submit">Start the Diagnostic →</PrimaryBtn>
@@ -291,7 +312,6 @@ function OpenResponseStep({
 
 // ── Main Form Orchestrator ────────────────────────────────────────────────────
 
-const RESULT_KEY = "ais_diagnostic_result";
 
 export default function DiagnosticForm({
   assessmentConfig,
@@ -339,38 +359,35 @@ export default function DiagnosticForm({
     if (!lead) return;
     setIsSubmitting(true);
 
-    const rawScore = calculateRawScore(answers, questions);
-    const categoryScores = calculateCategoryScores(answers, questions);
-    const normalizedScore = normalizeScore(rawScore, assessment.scoring_model.max_score);
-    const tier = classifyTier(normalizedScore, assessment.scoring_model.tiers);
-
-    const result = {
-      assessmentId: assessment.id,
-      rawScore,
-      normalizedScore,
-      tier,
-      categoryScores,
-      openResponse: openResponse || undefined,
-    };
-
-    const payload = buildLeadPayload(lead, answers, result);
-
-    // Persist result for the results page to read
     try {
-      sessionStorage.setItem(
-        RESULT_KEY,
-        JSON.stringify({ ...result, lead, normalizedScore })
-      );
-    } catch {
-      // sessionStorage unavailable — results page falls back to URL params
+      const rawScore = calculateRawScore(answers, questions);
+      const categoryScores = calculateCategoryScores(answers, questions);
+      const normalizedScore = normalizeScore(rawScore, assessment.scoring_model.max_score);
+      const tier = classifyTier(normalizedScore, assessment.scoring_model.tiers);
+
+      const result = {
+        assessmentId: assessment.id,
+        rawScore,
+        normalizedScore,
+        tier,
+        categoryScores,
+        openResponse: openResponse || undefined,
+      };
+
+      const payload = buildLeadPayload(lead, answers, result);
+
+      // Replace this log with your API/webhook call when the backend is ready
+      if (process.env.NODE_ENV !== "production") {
+        console.log("[Applied Intellisystems™ Diagnostic]", payload);
+      }
+
+      router.push(`/applied-intelligence/results/${tier}?score=${normalizedScore}`);
+    } catch (err) {
+      if (process.env.NODE_ENV !== "production") {
+        console.error("[Applied Intellisystems™ Diagnostic] Submission failed", err);
+      }
+      setIsSubmitting(false);
     }
-
-    // Log payload (replace with API call when backend is ready)
-    console.log("[Applied Intellisystems™ Diagnostic]", payload);
-
-    router.push(
-      `/applied-intelligence/results/${tier}?score=${normalizedScore}&name=${encodeURIComponent(lead.name)}`
-    );
   }, [lead, answers, openResponse, questions, assessment, router]);
 
   return (
@@ -405,4 +422,3 @@ export default function DiagnosticForm({
   );
 }
 
-export { RESULT_KEY };
