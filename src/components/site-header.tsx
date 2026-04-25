@@ -1,13 +1,18 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { mainNavConfig } from "./nav-config";
 import MobileNav from "./mobile-nav";
 
+const STANDALONE_PREFIXES = ["/applied-intelligence"];
+
 export default function SiteHeader() {
+  const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const isStandalone = STANDALONE_PREFIXES.some((prefix) => pathname.startsWith(prefix));
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -30,6 +35,8 @@ export default function SiteHeader() {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  if (isStandalone) return null;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-neutral-800">

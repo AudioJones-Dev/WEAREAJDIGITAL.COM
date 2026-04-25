@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "Applied Intellisystems™ | AJ DIGITAL",
+    "description": "AJ DIGITAL builds Applied Intellisystems™ that help companies identify and remove the constraints blocking scale.",
+    "path": "/applied-intelligence"
+  },
+  "brand": {
+    "name": "AJ DIGITAL",
+    "category": "Applied Intellisystems™",
+    "definition": "Applied Intellisystems™ are structured business systems that turn signal into execution and measurable growth.",
+    "one_liner": "AJ DIGITAL builds Applied Intellisystems™ that identify and remove the constraints blocking scale."
+  },
+  "conversion_model": {
+    "type": "assessment_funnel",
+    "primary_path": "Landing Page → Diagnostic → Dynamic Result → Apply",
+    "primary_cta": "Start the Strategic Diagnostic",
+    "secondary_cta": "Explore the Model",
+    "assessment_route": "/applied-intelligence/diagnostic",
+    "results_route": "/applied-intelligence/results"
+  },
+  "hero": {
+    "eyebrow": "Applied Intellisystems™",
+    "headline": "Find the Constraint Blocking Your Company’s Growth",
+    "subheadline": "Take the Applied Intellisystems™ Diagnostic to identify whether your biggest bottleneck is product clarity, positioning, GTM, operations, data, or AI system design.",
+    "supporting": "Not a marketing agency. Not a dev shop. A system execution partner for companies building something real.",
+    "primary_cta": {
+      "label": "Start the Strategic Diagnostic",
+      "href": "/applied-intelligence/diagnostic"
+    },
+    "secondary_cta": {
+      "label": "Explore the Model",
+      "href": "#model"
+    },
+    "microcopy": "Free diagnostic. Takes 3–5 minutes. Get a personalized constraint profile."
+  },
+  "problem": {
+    "heading": "Most Growth Problems Are Misdiagnosed",
+    "intro": "Companies usually believe they have a marketing problem, a development problem, or an AI problem. The real issue is usually deeper: a system constraint.",
+    "points": [
+      "The product is not clearly defined",
+      "The offer is not positioned sharply",
+      "The customer journey is fragmented",
+      "The team is operating manually",
+      "Data exists but is not usable",
+      "AI tools are being added without system design"
+    ],
+    "key_line": "Scaling a broken system only amplifies the leaks."
+  },
+  "assessment_intro": {
+    "heading": "Take the Applied Intellisystems™ Diagnostic",
+    "copy": "Answer 15 questions to reveal where your business system is leaking signal, slowing execution, or blocking scale.",
+    "measures": [
+      "Product clarity",
+      "Positioning strength",
+      "GTM repeatability",
+      "Operational scalability",
+      "Data and AI readiness"
+    ],
+    "cta": {
+      "label": "Start Diagnostic",
+      "href": "/applied-intelligence/diagnostic"
+    }
+  },
+  "diagnostic_frame": {
+    "heading": "We Find the Constraint Before We Prescribe the Solution",
+    "copy": "AJ DIGITAL starts with diagnosis, not deliverables. Before building campaigns, agents, funnels, content, or automations, we identify the highest-leverage bottleneck inside the business.",
+    "categories": [
+      { "area": "Product",     "question": "Is the core value clear?" },
+      { "area": "Positioning", "question": "Can the market understand the offer fast?" },
+      { "area": "GTM",        "question": "Is there a repeatable path to demand?" },
+      { "area": "Operations", "question": "Are workflows documented and scalable?" },
+      { "area": "Data",       "question": "Is business intelligence usable?" },
+      { "area": "AI",         "question": "Is automation attached to a real system?" }
+    ]
+  },
+  "model": {
+    "id": "model",
+    "heading": "The Applied Intellisystems™ Model",
+    "copy": "Applied Intellisystems™ turns scattered business activity into an intelligent operating system.",
+    "layers": [
+      {
+        "name": "Signal",
+        "description": "Find the truth inside the business.",
+        "items": [
+          "Customer behavior",
+          "Sales conversations",
+          "Market data",
+          "Operational bottlenecks",
+          "Product usage",
+          "Founder intuition"
+        ]
+      },
+      {
+        "name": "Structure",
+        "description": "Turn raw signal into usable systems.",
+        "items": [
+          "SOPs",
+          "Data schemas",
+          "Workflow maps",
+          "Offer architecture",
+          "Customer journey design",
+          "Content frameworks"
+        ]
+      },
+      {
+        "name": "Execution",
+        "description": "Deploy the system into the real world.",
+        "items": [
+          "Landing pages",
+          "Brand assets",
+          "AI agents",
+          "Automation workflows",
+          "GTM campaigns",
+          "Internal dashboards"
+        ]
+      },
+      {
+        "name": "Feedback",
+        "description": "Measure, refine, and compound.",
+        "items": [
+          "Attribution",
+          "Analytics",
+          "Conversion data",
+          "User feedback",
+          "Sales intelligence",
+          "Iteration loops"
+        ]
+      }
+    ]
+  },
+  "builds": {
+    "heading": "What This Looks Like in Practice",
+    "copy": "We do not start with a service menu. We build what the constraint requires.",
+    "items": [
+      { "system": "Product Clarity",     "output": "Offer definition, wedge positioning, MVP refinement" },
+      { "system": "Brand Positioning",   "output": "Category narrative, messaging, pitch architecture" },
+      { "system": "GTM Infrastructure",  "output": "Landing pages, lead capture, acquisition systems" },
+      { "system": "AI Workflows",        "output": "Agents, SOP automation, internal copilots" },
+      { "system": "Content Systems",     "output": "Authority engines, thought leadership, repurposing" },
+      { "system": "Operations",          "output": "Dashboards, process maps, workflows" },
+      { "system": "Data + Feedback",     "output": "Attribution, reporting, intelligence loops" }
+    ]
+  },
+  "execution_layer": {
+    "heading": "Powered by Our Applied Intellisystems™ Execution Layer",
+    "description": "AJ DIGITAL is building an internal execution layer designed to help businesses move from scattered tools to structured intelligence.",
+    "positioning_note": "This should not be framed as a finished SaaS product. It is AJ DIGITAL’s internal execution layer for building smarter client systems.",
+    "capabilities": [
+      "Business data ingestion",
+      "Workflow automation",
+      "Agent-based execution",
+      "Brand intelligence",
+      "Content operations",
+      "Project management",
+      "Feedback loops",
+      "ROI attribution"
+    ]
+  },
+  "why": {
+    "heading": "Built for the AI Era: Generalists With Systems Depth",
+    "copy": "The AI era rewards teams that can move across disciplines.",
+    "points": [
+      "Product management",
+      "Project management",
+      "Branding",
+      "Marketing",
+      "AI systems",
+      "Automation",
+      "Business operations"
+    ],
+    "key_line": "We are not here to add more tools. We are here to make the system work."
+  },
+  "fit": {
+    "heading": "Best-Fit Engagements",
+    "copy": "We are best suited for companies that need strategic clarity and execution across multiple layers.",
+    "best_fit": [
+      "A sharper product narrative",
+      "A stronger go-to-market system",
+      "AI workflows that attach to real operations",
+      "Better brand authority",
+      "Better conversion infrastructure",
+      "Cleaner internal systems",
+      "A diagnostic before spending more money"
+    ],
+    "not_fit": [
+      "You only want social media posts",
+      "You want automation before process clarity",
+      "You need low-cost task execution",
+      "You are not ready to examine the actual bottleneck"
+    ]
+  },
+  "diagnostic_offer": {
+    "heading": "Start With a Strategic Diagnostic",
+    "copy": "The diagnostic identifies the primary constraint limiting growth and produces a practical execution roadmap.",
+    "deliverables": [
+      "System constraint map",
+      "Product / positioning review",
+      "GTM gap analysis",
+      "AI opportunity map",
+      "Operational bottleneck review",
+      "Recommended 30–45 day execution plan"
+    ],
+    "cta": {
+      "label": "Start the Strategic Diagnostic",
+      "href": "/applied-intelligence/diagnostic"
+    }
+  },
+  "final_cta": {
+    "headline": "If You’re Building Something Real, Let’s Find the Constraint",
+    "subheadline": "The goal is not more activity. The goal is a system that compounds.",
+    "cta": {
+      "label": "Start the Diagnostic",
+      "href": "/applied-intelligence/diagnostic"
+    }
+  }
+}

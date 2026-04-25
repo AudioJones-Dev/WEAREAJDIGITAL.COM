@@ -5,6 +5,8 @@ import AnalyticsProvider from "@/components/analytics-provider";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import StickyApplyCta from "@/components/sticky-apply-cta";
+import HeaderSpacer from "@/components/header-spacer";
+import SiteChrome from "@/components/site-chrome";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,11 +68,14 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <AnalyticsProvider />
         <SiteHeader />
-        <main className="min-h-screen pt-20">
+        <HeaderSpacer />
+        <main className="min-h-screen">
           {children}
         </main>
-        <StickyApplyCta />
-        <SiteFooter />
+        <SiteChrome
+          sticky={<StickyApplyCta />}
+          footer={<SiteFooter />}
+        />
       </body>
     </html>
   );

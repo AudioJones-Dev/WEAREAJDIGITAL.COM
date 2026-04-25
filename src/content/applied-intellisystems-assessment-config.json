@@ -1,0 +1,277 @@
+{
+  "assessment": {
+    "id": "applied-intellisystems-diagnostic",
+    "title": "Applied Intellisystems™ Diagnostic",
+    "route": "/applied-intelligence/diagnostic",
+    "estimated_time": "3–5 minutes",
+    "scoring_model": {
+      "type": "single_select_weighted",
+      "questions": 15,
+      "points_per_question": { "min": 0, "max": 3 },
+      "max_score": 45,
+      "normalized_score_formula": "round((rawScore / 45) * 100)",
+      "tiers": [
+        {
+          "id": "hot",
+          "label": "Scale-Ready Constraint",
+          "min": 75,
+          "max": 100,
+          "route": "/applied-intelligence/results/hot",
+          "primary_cta": "Request Strategic Diagnostic"
+        },
+        {
+          "id": "warm",
+          "label": "System Alignment Opportunity",
+          "min": 45,
+          "max": 74,
+          "route": "/applied-intelligence/results/warm",
+          "primary_cta": "Book a Fit Review"
+        },
+        {
+          "id": "cold",
+          "label": "Foundation-Building Stage",
+          "min": 0,
+          "max": 44,
+          "route": "/applied-intelligence/results/cold",
+          "primary_cta": "Get the Systems Readiness Guide"
+        }
+      ]
+    },
+    "lead_capture": [
+      { "id": "name",    "label": "Name",    "type": "text",  "required": true  },
+      { "id": "company", "label": "Company", "type": "text",  "required": true  },
+      { "id": "email",   "label": "Email",   "type": "email", "required": true  },
+      { "id": "website", "label": "Website", "type": "url",   "required": false },
+      { "id": "phone",   "label": "Phone",   "type": "tel",   "required": false }
+    ],
+    "questions": [
+      {
+        "id": "q1_company_stage",
+        "category": "current_situation",
+        "label": "Which best describes your company right now?",
+        "options": [
+          { "value": "idea_or_early",   "label": "We are still shaping the offer or product.",             "points": 0 },
+          { "value": "some_traction",   "label": "We have traction, but growth is inconsistent.",           "points": 1 },
+          { "value": "growing_manual",  "label": "We are growing, but too much depends on manual effort.",  "points": 2 },
+          { "value": "ready_to_scale",  "label": "We have demand and need stronger systems to scale.",      "points": 3 }
+        ]
+      },
+      {
+        "id": "q2_primary_constraint",
+        "category": "current_situation",
+        "label": "Where do you suspect the biggest constraint is?",
+        "options": [
+          { "value": "unclear",    "label": "We are not sure yet.",                                          "points": 0 },
+          { "value": "marketing",  "label": "Marketing or lead generation.",                                 "points": 1 },
+          { "value": "operations", "label": "Operations, delivery, or internal workflow.",                   "points": 2 },
+          { "value": "system",     "label": "The business system itself needs diagnosis.",                   "points": 3 }
+        ]
+      },
+      {
+        "id": "q3_product_clarity",
+        "category": "product",
+        "label": "How clearly can someone understand your core value in under 10 seconds?",
+        "options": [
+          { "value": "not_clear",     "label": "They usually cannot.",                                       "points": 0 },
+          { "value": "somewhat_clear","label": "Some people get it, but it takes explanation.",              "points": 1 },
+          { "value": "mostly_clear",  "label": "It is clear for the right audience.",                        "points": 2 },
+          { "value": "very_clear",    "label": "It is sharp, specific, and easy to repeat.",                 "points": 3 }
+        ]
+      },
+      {
+        "id": "q4_positioning",
+        "category": "positioning",
+        "label": "How strong is your positioning in the market?",
+        "options": [
+          { "value": "generic",        "label": "We sound similar to everyone else.",                        "points": 0 },
+          { "value": "some_difference","label": "We have differences, but they are not packaged well.",      "points": 1 },
+          { "value": "clear_angle",    "label": "We have a clear angle but need sharper messaging.",         "points": 2 },
+          { "value": "category_ready", "label": "We have a strong point of view and category narrative.",    "points": 3 }
+        ]
+      },
+      {
+        "id": "q5_gtm_repeatability",
+        "category": "gtm",
+        "label": "How repeatable is your path to generating qualified demand?",
+        "options": [
+          { "value": "random",            "label": "It is mostly random or referral-based.",                  "points": 0 },
+          { "value": "some_channels",     "label": "We have channels, but performance is inconsistent.",      "points": 1 },
+          { "value": "working_motion",    "label": "We have a motion that works but needs optimization.",     "points": 2 },
+          { "value": "repeatable_system", "label": "We have a repeatable acquisition system ready to scale.", "points": 3 }
+        ]
+      },
+      {
+        "id": "q6_customer_journey",
+        "category": "gtm",
+        "label": "How connected is your customer journey from first touch to sale?",
+        "options": [
+          { "value": "fragmented",       "label": "It is fragmented or unclear.",                            "points": 0 },
+          { "value": "partly_mapped",    "label": "Parts exist, but the path is not cohesive.",              "points": 1 },
+          { "value": "mostly_mapped",    "label": "The journey is mapped but not fully optimized.",          "points": 2 },
+          { "value": "clear_and_measured","label": "The journey is clear, measurable, and conversion-focused.","points": 3 }
+        ]
+      },
+      {
+        "id": "q7_operations",
+        "category": "operations",
+        "label": "How scalable are your internal workflows?",
+        "options": [
+          { "value": "tribal_knowledge",  "label": "Most processes live in people's heads.",                 "points": 0 },
+          { "value": "partly_documented", "label": "Some processes are documented, but not consistently followed.", "points": 1 },
+          { "value": "documented",        "label": "Core workflows are documented but still manual.",         "points": 2 },
+          { "value": "systemized",        "label": "Workflows are documented, owned, and improving.",        "points": 3 }
+        ]
+      },
+      {
+        "id": "q8_tooling",
+        "category": "operations",
+        "label": "How well do your tools support the business?",
+        "options": [
+          { "value": "scattered",          "label": "Tools are scattered and create more work.",              "points": 0 },
+          { "value": "usable_but_manual",  "label": "Tools help, but require too much manual coordination.", "points": 1 },
+          { "value": "mostly_integrated",  "label": "Tools are mostly connected but not intelligence-driven.","points": 2 },
+          { "value": "operating_layer",    "label": "Tools support a clear operating system.",               "points": 3 }
+        ]
+      },
+      {
+        "id": "q9_data_usability",
+        "category": "data",
+        "label": "How usable is your business data for decision-making?",
+        "options": [
+          { "value": "not_usable",       "label": "We do not trust or use the data.",                        "points": 0 },
+          { "value": "scattered",        "label": "Data exists, but it is scattered.",                       "points": 1 },
+          { "value": "reported",         "label": "We have reports, but insights are not always actionable.","points": 2 },
+          { "value": "intelligence_loop","label": "Data creates clear feedback loops for decisions.",        "points": 3 }
+        ]
+      },
+      {
+        "id": "q10_ai_readiness",
+        "category": "ai",
+        "label": "How are you currently using AI?",
+        "options": [
+          { "value": "not_using",     "label": "We are barely using it.",                                    "points": 0 },
+          { "value": "ad_hoc",        "label": "We use tools casually, but not as systems.",                 "points": 1 },
+          { "value": "workflow_level","label": "We use AI in some workflows.",                               "points": 2 },
+          { "value": "system_design", "label": "We are ready to attach AI to real operating systems.",       "points": 3 }
+        ]
+      },
+      {
+        "id": "q11_previous_attempts",
+        "category": "past_attempts",
+        "label": "What have you already tried to improve growth or operations?",
+        "options": [
+          { "value": "nothing_structured",    "label": "Nothing structured yet.",                            "points": 0 },
+          { "value": "tools_or_tactics",      "label": "Tools, tactics, or isolated experiments.",           "points": 1 },
+          { "value": "consultants_or_projects","label": "Consultants, campaigns, or project-based fixes.",   "points": 2 },
+          { "value": "system_attempt",        "label": "We have tried to build a system and know what failed.","points": 3 }
+        ]
+      },
+      {
+        "id": "q12_90_day_goal",
+        "category": "goals_timeline",
+        "label": "What matters most over the next 90 days?",
+        "options": [
+          { "value": "explore", "label": "Explore what is possible.",                                        "points": 0 },
+          { "value": "clarify", "label": "Clarify offer, positioning, or direction.",                        "points": 1 },
+          { "value": "build",   "label": "Build a working growth or operations system.",                     "points": 2 },
+          { "value": "scale",   "label": "Scale what is already working with stronger infrastructure.",      "points": 3 }
+        ]
+      },
+      {
+        "id": "q13_timeline",
+        "category": "goals_timeline",
+        "label": "How soon do you want to move?",
+        "options": [
+          { "value": "no_timeline", "label": "No clear timeline yet.",          "points": 0 },
+          { "value": "quarter",     "label": "Sometime this quarter.",           "points": 1 },
+          { "value": "month",       "label": "Within 30–45 days.",              "points": 2 },
+          { "value": "now",         "label": "Immediately or this month.",       "points": 3 }
+        ]
+      },
+      {
+        "id": "q14_budget_readiness",
+        "category": "resources_readiness",
+        "label": "What level of investment are you prepared to consider if the constraint is clear?",
+        "options": [
+          { "value": "not_ready", "label": "Not ready to invest yet.",                                       "points": 0 },
+          { "value": "low",       "label": "Small project or advisory budget.",                              "points": 1 },
+          { "value": "medium",    "label": "Meaningful sprint or implementation budget.",                    "points": 2 },
+          { "value": "high",      "label": "Strategic implementation budget if the case is strong.",         "points": 3 }
+        ]
+      },
+      {
+        "id": "q15_solution_preference",
+        "category": "resources_readiness",
+        "label": "Which solution style fits you best?",
+        "options": [
+          { "value": "education",    "label": "Education or resources we can use ourselves.",                "points": 0 },
+          { "value": "advisory",     "label": "Strategic advisory and recommendations.",                     "points": 1 },
+          { "value": "sprint",       "label": "A focused diagnostic and roadmap sprint.",                    "points": 2 },
+          { "value": "done_with_you","label": "A partner to design and deploy the system with us.",          "points": 3 }
+        ]
+      }
+    ],
+    "open_response": {
+      "id": "context",
+      "label": "What else should we know about what you are trying to scale?",
+      "type": "textarea",
+      "required": false
+    }
+  },
+  "result_pages": {
+    "hot": {
+      "tier_label": "Scale-Ready Constraint",
+      "headline": "Your Company Looks Ready for a Strategic Diagnostic",
+      "summary": "Your answers suggest the issue is not lack of effort. The likely opportunity is finding the system constraint and removing it with focused execution.",
+      "insights": [
+        "You likely have enough traction or urgency to justify deeper diagnosis.",
+        "Your bottleneck appears connected to system design, not isolated tactics.",
+        "A 30–45 day execution roadmap could convert scattered activity into a clearer operating model."
+      ],
+      "primary_cta": {
+        "label": "Request Strategic Diagnostic",
+        "href": "/apply?source=applied-intelligence&result=hot"
+      },
+      "secondary_cta": {
+        "label": "Explore the Model Again",
+        "href": "/applied-intelligence#model"
+      }
+    },
+    "warm": {
+      "tier_label": "System Alignment Opportunity",
+      "headline": "You Have a System Alignment Opportunity",
+      "summary": "Your answers suggest there is real potential, but some foundations need clarification before heavy implementation.",
+      "insights": [
+        "Your company may benefit from sharper product, positioning, or GTM alignment.",
+        "AI and automation should be attached only after the operating model is clearer.",
+        "A fit review can determine whether a diagnostic sprint is the right next move."
+      ],
+      "primary_cta": {
+        "label": "Book a Fit Review",
+        "href": "/apply?source=applied-intelligence&result=warm"
+      },
+      "secondary_cta": {
+        "label": "Review Best-Fit Criteria",
+        "href": "/applied-intelligence#fit"
+      }
+    },
+    "cold": {
+      "tier_label": "Foundation-Building Stage",
+      "headline": "You're in the Foundation-Building Stage",
+      "summary": "Your answers suggest the best next step may be clarifying the basics before investing in advanced systems or AI workflows.",
+      "insights": [
+        "Focus first on offer clarity, customer journey, and documented workflows.",
+        "Avoid adding automation to unclear or unstable processes.",
+        "Use the readiness guide to identify the first system layer to strengthen."
+      ],
+      "primary_cta": {
+        "label": "Get the Systems Readiness Guide",
+        "href": "/resources?source=applied-intelligence&result=cold"
+      },
+      "secondary_cta": {
+        "label": "Return to the Diagnostic Page",
+        "href": "/applied-intelligence"
+      }
+    }
+  }
+}
