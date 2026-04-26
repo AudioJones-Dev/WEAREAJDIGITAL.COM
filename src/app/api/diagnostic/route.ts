@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { LeadPayload } from "@/lib/assessment";
+import { sendDiagnosticNotification } from "@/lib/email";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
@@ -40,44 +41,45 @@ export async function POST(request: Request) {
 
   const webhookUrl = process.env.DIAGNOSTIC_WEBHOOK_URL;
 
-  if (!webhookUrl) {
-    if (process.env.NODE_ENV === "production") {
-      console.error("[diagnostic] DIAGNOSTIC_WEBHOOK_URL is not configured");
-      return NextResponse.json(
-        { success: false, message: "Diagnostic capture is not configured" },
-        { status: 503 }
-      );
-    }
+  if (webhookUrl) {
+    try {
+      const webhookRes = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    console.log("[diagnostic] Local diagnostic payload", payload);
-    return NextResponse.json({
-      success: true,
-      captured: false,
-      tier: payload.assessment.tier,
-    });
-  }
+      if (!webhookRes.ok) {
+        const responseText = await webhookRes.text().catch(() => "");
+        console.error(
+          "[diagnostic] Webhook delivery failed",
+          webhookRes.status,
+          responseText
+        );
+        return NextResponse.json(
+          { success: false, message: "Diagnostic capture failed" },
+          { status: 502 }
+        );
+      }
 
-  try {
-    const webhookRes = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    if (!webhookRes.ok) {
-      const responseText = await webhookRes.text().catch(() => "");
-      console.error(
-        "[diagnostic] Webhook delivery failed",
-        webhookRes.status,
-        responseText
-      );
+      return NextResponse.json({
+        success: true,
+        captured: true,
+        delivery: "webhook",
+        tier: payload.assessment.tier,
+      });
+    } catch (error) {
+      console.error("[diagnostic] Webhook delivery error", error);
       return NextResponse.json(
         { success: false, message: "Diagnostic capture failed" },
         { status: 502 }
       );
     }
-  } catch (error) {
-    console.error("[diagnostic] Webhook delivery error", error);
+  }
+
+  const emailResult = await sendDiagnosticNotification(payload);
+
+  if (!emailResult.success) {
     return NextResponse.json(
       { success: false, message: "Diagnostic capture failed" },
       { status: 502 }
@@ -87,6 +89,7 @@ export async function POST(request: Request) {
   return NextResponse.json({
     success: true,
     captured: true,
+    delivery: "email",
     tier: payload.assessment.tier,
   });
 }
