@@ -1,4 +1,4 @@
-export const siteUrl = "https://weareajdigital.com";
+export const siteUrl = "https://www.weareajdigital.com";
 export const CALENDLY_STRATEGY_SESSION_URL =
   "https://calendly.com/audiojones-ajdigital/30min";
 export const CONTACT_PATH = "/contact";

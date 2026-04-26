@@ -29,30 +29,29 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://weareajdigital.com/#website",
-        url: "https://weareajdigital.com",
+        "@id": "https://www.weareajdigital.com/#website",
+        url: "https://www.weareajdigital.com",
         name: "AJ Digital",
         description:
           "AJ Digital builds podcast systems, AI workflows, and content engines.",
-        publisher: { "@id": "https://weareajdigital.com/#organization" },
+        publisher: { "@id": "https://www.weareajdigital.com/#organization" },
       },
       {
         "@type": "Organization",
-        "@id": "https://weareajdigital.com/#organization",
+        "@id": "https://www.weareajdigital.com/#organization",
         name: "AJ Digital",
-        url: "https://weareajdigital.com",
+        url: "https://www.weareajdigital.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://weareajdigital.com/logo.png",
+          url: "https://www.weareajdigital.com/logo.png",
         },
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://weareajdigital.com/#localbusiness",
+        "@id": "https://www.weareajdigital.com/#localbusiness",
         name: "AJ Digital",
-        url: "https://weareajdigital.com",
-        image: "https://weareajdigital.com/logo.png",
-        telephone: "",
+        url: "https://www.weareajdigital.com",
+        image: "https://www.weareajdigital.com/logo.png",
         areaServed: [
           { "@type": "City", name: "Miami", region: "FL" },
           { "@type": "City", name: "Fort Lauderdale", region: "FL" },
