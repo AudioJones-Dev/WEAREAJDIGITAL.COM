@@ -37,3 +37,6 @@ next-env.d.ts
 # generated local tooling output
 .sanity/
 AJ-DIGITAL-ASSET-AUDIT.html
+
+# local agent/tooling state
+.claude/

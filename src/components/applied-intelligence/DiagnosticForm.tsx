@@ -274,6 +274,7 @@ function OpenResponseStep({
   onBack,
   onSubmit,
   isSubmitting,
+  submissionError,
 }: {
   label: string;
   value: string;
@@ -281,6 +282,7 @@ function OpenResponseStep({
   onBack: () => void;
   onSubmit: () => void;
   isSubmitting: boolean;
+  submissionError: string | null;
 }) {
   return (
     <div className="space-y-6">
@@ -306,6 +308,12 @@ function OpenResponseStep({
           {isSubmitting ? "Calculating…" : "Get My Constraint Profile →"}
         </PrimaryBtn>
       </div>
+
+      {submissionError && (
+        <p className="text-sm text-red-400" role="alert">
+          {submissionError}
+        </p>
+      )}
     </div>
   );
 }
@@ -331,6 +339,7 @@ export default function DiagnosticForm({
   const [answers, setAnswers] = useState<AssessmentAnswerMap>({});
   const [openResponse, setOpenResponse] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
 
   const currentQuestionIndex = step - 1; // 0-indexed into questions array
   const currentQuestion = questions[currentQuestionIndex];
@@ -358,6 +367,7 @@ export default function DiagnosticForm({
   const handleSubmit = useCallback(async () => {
     if (!lead) return;
     setIsSubmitting(true);
+    setSubmissionError(null);
 
     try {
       const rawScore = calculateRawScore(answers, questions);
@@ -376,9 +386,14 @@ export default function DiagnosticForm({
 
       const payload = buildLeadPayload(lead, answers, result);
 
-      // Replace this log with your API/webhook call when the backend is ready
-      if (process.env.NODE_ENV !== "production") {
-        console.log("[Applied Intellisystems™ Diagnostic]", payload);
+      const response = await fetch("/api/diagnostic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Diagnostic capture failed");
       }
 
       router.push(`/applied-intelligence/results/${tier}?score=${normalizedScore}`);
@@ -386,6 +401,9 @@ export default function DiagnosticForm({
       if (process.env.NODE_ENV !== "production") {
         console.error("[Applied Intellisystems™ Diagnostic] Submission failed", err);
       }
+      setSubmissionError(
+        "We could not submit your diagnostic. Please try again."
+      );
       setIsSubmitting(false);
     }
   }, [lead, answers, openResponse, questions, assessment, router]);
@@ -416,9 +434,9 @@ export default function DiagnosticForm({
           onBack={handleBack}
           onSubmit={handleSubmit}
           isSubmitting={isSubmitting}
+          submissionError={submissionError}
         />
       )}
     </Card>
   );
 }
-
