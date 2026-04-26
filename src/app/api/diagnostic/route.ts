@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { LeadPayload } from "@/lib/assessment";
 import { sendDiagnosticNotification } from "@/lib/email";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
@@ -37,6 +38,37 @@ export async function POST(request: Request) {
       { success: false, message: "Invalid JSON payload" },
       { status: 400 }
     );
+  }
+
+  // Persist to Supabase (non-blocking — delivery path below is the reliable fallback)
+  try {
+    const supabase = getSupabaseAdmin();
+    await supabase.from("diagnostic_submissions").insert({
+      name: payload.lead.name,
+      email: payload.lead.email,
+      company: payload.lead.company ?? null,
+      website: payload.lead.website ?? null,
+      phone: payload.lead.phone ?? null,
+      assessment_id: payload.assessment.assessmentId,
+      raw_score: payload.assessment.rawScore,
+      normalized_score: payload.assessment.normalizedScore,
+      tier: payload.assessment.tier,
+      category_scores: payload.assessment.categoryScores,
+      answers: payload.assessment.answers,
+      open_response: payload.assessment.openResponse ?? null,
+      utm_source: payload.tracking?.utm_source ?? null,
+      utm_medium: payload.tracking?.utm_medium ?? null,
+      utm_campaign: payload.tracking?.utm_campaign ?? null,
+      referrer: payload.tracking?.referrer ?? null,
+      page_path: payload.tracking?.pagePath ?? null,
+      submitted_at: payload.tracking?.submittedAt
+        ? new Date(payload.tracking.submittedAt)
+        : null,
+      ip_address: request.headers.get("x-forwarded-for") ?? null,
+      user_agent: request.headers.get("user-agent") ?? null,
+    });
+  } catch (dbErr) {
+    console.error("[diagnostic] Supabase write failed:", dbErr);
   }
 
   const webhookUrl = process.env.DIAGNOSTIC_WEBHOOK_URL;
