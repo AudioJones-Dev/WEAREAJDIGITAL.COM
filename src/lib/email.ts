@@ -56,6 +56,10 @@ Submitted: ${new Date().toISOString()}
 `;
 
   if (!resend) {
+    if (process.env.NODE_ENV === "production") {
+      console.error("[apply] RESEND_API_KEY is not configured");
+      return { success: false, error: "RESEND_API_KEY is not configured" };
+    }
     console.log("==========================================");
     console.log("EMAIL SYSTEM OFFLINE. WOULD HAVE SENT:");
     console.log("SUBJECT:", subject);

@@ -33,8 +33,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Applied Intellisystems pages
+  const appliedIntelligencePages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/applied-intelligence`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/applied-intelligence/diagnostic`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+  ];
+
   // Service pages
   const servicePages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/services`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     {
       url: `${BASE_URL}/services/podcast-production`,
       lastModified: now,
@@ -103,12 +125,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Blog articles
+  // Blog articles — canonical slugs only (no redirect pages)
   const blogSlugs = [
     "ai-automation-for-content-creators",
     "ai-automation-podcast-production",
     "ai-consulting-for-small-business",
-    "ai-consulting-small-business",
     "ai-content-automation-guide",
     "ai-tools-for-content-creation",
     "ai-tools-for-entrepreneurs",
@@ -116,7 +137,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "content-repurposing-guide",
     "content-repurposing-system",
     "how-to-build-authority-online",
-    "how-to-launch-podcast-business",
     "how-to-start-a-podcast-for-business",
     "personal-brand-strategy-for-entrepreneurs",
     "podcast-content-repurposing",
@@ -136,6 +156,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...corePages,
+    ...appliedIntelligencePages,
     ...servicePages,
     ...localPages,
     ...caseStudyPages,
