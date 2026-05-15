@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { LeadPayload } from "@/lib/assessment";
 import { sendDiagnosticNotification } from "@/lib/email";
 import { getSupabaseAdmin } from "@/lib/supabase";
+import { clientIp, rateLimit } from "@/lib/rate-limit";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
@@ -22,6 +23,19 @@ function isValidDiagnosticPayload(value: unknown): value is LeadPayload {
 }
 
 export async function POST(request: Request) {
+  const limit = rateLimit(`diagnostic:${clientIp(request)}`, 5, 60_000);
+  if (!limit.allowed) {
+    return NextResponse.json(
+      { success: false, message: "Too many requests. Please try again shortly." },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": Math.max(1, Math.ceil((limit.resetAt - Date.now()) / 1000)).toString(),
+        },
+      }
+    );
+  }
+
   let payload: LeadPayload;
 
   try {
