@@ -42,4 +42,8 @@ This project does **not** use Prisma, Firebase, or Whop. If you see references t
 - `npm run dev` — start Next.js locally
 - `npm run build` — production build
 - `npm run lint` — ESLint via `next lint`
+- `npm run typecheck` — TypeScript check (`tsc --noEmit`)
 - `npm run sanity:dev` — run Sanity Studio locally
+
+CI runs `lint`, `typecheck`, and `build` on every PR (see `.github/workflows/ci.yml`).
+Secret scanning and a dependency audit also run on every PR.
