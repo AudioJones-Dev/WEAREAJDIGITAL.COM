@@ -356,3 +356,56 @@ This page succeeds when the visitor realizes:
 4. Booking a call is the logical next step
 
 This page sells leverage through structure.
+
+---
+
+# APPENDIX A — Alternate Draft Reference Material
+
+The following content was preserved from an earlier alternate draft (`docs/pages/services/content-systems.md`) before consolidation. Use as supplementary copy if any sections in the canonical spec above need stronger AEO phrasing or harder operational framing.
+
+## Alternate Hero / Positioning Copy
+
+H1 (alternate): Content Systems That Turn One Recording Into 30+ Assets
+Subheadline (alternate): We build content systems that transform podcasts, videos, and interviews into a consistent engine for blogs, clips, social posts, and lead-generating content.
+Hero microcopy: Built for serious operators. Systemized, not improvised. Strategy + execution.
+
+## Alternate "What is a content system" Answer Block
+
+A content system is a defined, repeatable architecture that records high-value thoughts from an expert and engineers them into various optimized digital formats. Rather than sitting down to write isolated blog posts or edit single videos, a content automation system extracts dozens of assets — social clips, SEO guides, newsletters — from one central pillar recording without requiring additional human effort from the founder.
+
+## Alternate Repurposing Output Matrix
+
+| Content Input | Repurposed Assets | Business Outcome |
+|---|---|---|
+| Podcast episode | 3 vertical clips, 1 SEO blog, 5 tweets | Traffic + social reach + topical authority |
+| Webinar | 1 gated lead magnet, 2 LinkedIn articles | High volume lead generation |
+| Founder interview | 5 micro-narrative clips, 1 newsletter | Brand positioning and thought leadership |
+| Customer conversation | 1 case study, 3 testimonial graphics | Bottom-funnel sales enablement |
+| Internal training video | 1 SOP document, 3 onboarding modules | Internal system consistency |
+
+## Alternate Process Framework
+
+### The AJ Digital Content Systems Framework™
+
+1. **Capture long-form content** — record dense, high-fidelity source material like podcasts or consulting calls.
+2. **Extract key ideas and moments** — process the material to flag data points, frameworks, and narrative hooks.
+3. **Transform into platform-specific assets** — rewrite transcripts into SEO articles and reformat horizontal video into vertical clips.
+4. **Distribute consistently** — schedule the final output via native platform APIs or scheduling platforms.
+5. **Optimize for SEO and AEO** — structure written output to rank on Google and be extracted by generative AI search.
+6. **Route attention into offers and calls** — ensure all distributed elements contain deliberate qualification steps pointing back to sales mechanisms.
+
+## Alternate Differentiation Matrix
+
+| Typical Content Agency | AJ Digital |
+|---|---|
+| One-off deliverables | Repeatable processing systems |
+| Posting manual content | Building scalable content infrastructure |
+| Manual workflows | Automation-enabled AI workflows |
+| Vanity metrics (views/likes) | Authority positioning + lead generation |
+| Disconnected assets | Integrated, compounding content engines |
+
+## Alternate FAQ Phrasings
+
+- **How many assets can one recording produce?** One high-quality, 60-minute recording can easily produce over 30 distinct pieces of content — a full YouTube video, an audio podcast, a long-form SEO blog, 3–5 vertical clips, and a dozen text-based social posts.
+- **Is content repurposing worth it?** Yes. It is the highest ROI activity in digital marketing because it leverages a single hour of an expert's time into weeks of cross-platform brand presence, massively reducing customer acquisition cost.
+- **How long does it take to set up a system?** A complete foundational content system can generally be architected and deployed within two to four weeks, assuming the client can record the initial seed content immediately.

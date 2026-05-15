@@ -1,19 +1,45 @@
 # AI Agent Developer Instructions
 
-Welcome to the `ajdigital.app` workspace. These instructions are provided to assist AI agents (Claude, Perplexity, Codex, etc.) in operating efficiently within our Next.js App Router codebase.
+Welcome to the `weareajdigital.com` workspace. These instructions help AI agents (Claude, Codex, Perplexity, etc.) operate efficiently in this codebase.
 
 ## Tech Stack
-- **Framework:** Next.js (App Router)
+
+- **Framework:** Next.js (App Router) — version pinned in `package.json`
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
+- **CMS:** Sanity (configured in `sanity.config.ts`, schemas in `sanity/schemaTypes/`)
+- **Data / Auth:** Supabase (client in `src/lib/supabase.ts`, migrations in `supabase/migrations/`, generated types in `src/types/supabase.ts`)
+- **Email:** Resend (`src/lib/email.ts`)
+- **Hosting:** Vercel (config in `vercel.json`)
 
-## Architecture Guidelines
-- **`src/app/`**: Contains the Next.js App Router files. Use layout files for persistent elements and page files for route components.
-- **`src/components/`**: Place all reusable UI components here. Whenever possible, use functional components and Tailwind for styling.
-- **`src/lib/`**: Use this for standard utility functions, API connectors, and shared logic.
-- **`schema/`**: Refer to this directory for Prisma schemas, TypeScript interfaces, and other core data models.
+This project does **not** use Prisma, Firebase, or Whop. If you see references to any of those, treat them as stale and flag them.
+
+## Directory Map
+
+- `src/app/` — Next.js App Router routes. Pages, layouts, route handlers (`api/`).
+- `src/components/` — Reusable React components. Prefer functional + Tailwind.
+- `src/lib/` — Shared utilities, API clients, schema validators (`apply-schema.ts`, `assessment.ts`, etc.).
+- `src/data/` — Static content collections consumed by pages.
+- `src/content/` — JSON config used by feature pages (e.g. Applied Intellisystems).
+- `src/types/` — Shared TypeScript types, including generated Supabase types.
+- `sanity/` — Sanity Studio config and schema types.
+- `supabase/` — Local Supabase config and SQL migrations.
+- `content/blog/` — Markdown source for blog articles (each has a matching route under `src/app/blog/`).
+- `public/` — Static assets (icons, OG images, logos, persona photos).
+- `docs/` — Specs, page briefs, operational runbooks. See `docs/archive/` for historical/completed material.
 
 ## Development Rules
-1. Always prefer Server Components by default. Include `'use client'` explicitly only when hooks (like `useState`, `useEffect`) or browser APIs are required.
-2. Rely on Tailwind utility classes for UI modifications before attempting custom CSS.
-3. Keep business logic decoupled from UI components by leveraging `src/lib/`.
+
+1. Default to React Server Components. Add `'use client'` only when hooks or browser APIs require it.
+2. Style with Tailwind utility classes before reaching for custom CSS.
+3. Keep business logic in `src/lib/` so route components stay thin.
+4. Never commit secrets. `.env.example` is the only env file in git; real values go in `.env.local`.
+5. When adding a new blog route under `src/app/blog/<slug>/`, also add or update the matching entry in `content/blog/` and the canonical list in `src/lib/blog-posts.ts`.
+6. When changing the Supabase schema, write a new SQL file in `supabase/migrations/` and regenerate `src/types/supabase.ts`.
+
+## Useful Scripts
+
+- `npm run dev` — start Next.js locally
+- `npm run build` — production build
+- `npm run lint` — ESLint via `next lint`
+- `npm run sanity:dev` — run Sanity Studio locally

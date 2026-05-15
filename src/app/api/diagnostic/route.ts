@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       referrer: payload.tracking?.referrer ?? null,
       page_path: payload.tracking?.pagePath ?? null,
       submitted_at: payload.tracking?.submittedAt
-        ? new Date(payload.tracking.submittedAt)
+        ? new Date(payload.tracking.submittedAt).toISOString()
         : null,
       ip_address: request.headers.get("x-forwarded-for") ?? null,
       user_agent: request.headers.get("user-agent") ?? null,

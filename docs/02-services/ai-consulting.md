@@ -388,3 +388,60 @@ This page succeeds when it makes the visitor feel:
 This page is not a trend page.
 
 This page is a systems consulting sales page.
+
+---
+
+# APPENDIX A — Alternate Draft Reference Material
+
+The following content was preserved from an earlier alternate draft (`docs/pages/services/ai-consulting.md`) before consolidation. Use as supplementary copy if any sections in the canonical spec above need stronger AEO phrasing or harder operational framing.
+
+## Alternate Hero / Positioning Copy
+
+H1 (alternate): AI Consulting for Entrepreneurs and Small Businesses
+Subheadline (alternate): We help you turn AI from noise into practical systems that save time, increase output, and improve how your business operates.
+Hero microcopy: No fluff. No hype. Just practical systems.
+
+## Alternate "What is AI consulting" Answer Block
+
+AI consulting is a strategic implementation service designed to help entrepreneurs integrate artificial intelligence directly into their operational workflows. As an AI automation consultant, we assess your operational bottlenecks and deploy specific models, prompt architectures, and logic engines (like n8n) to replace manual, repetitive actions with streamlined, autonomous precision.
+
+## Alternate "Who is AI consulting for" Block
+
+AI consulting is built for entrepreneurs, founders, and small businesses constrained by manual digital tasks or stalled by disorganized administrative processes. This service is for leaders who recognize the financial leverage of AI but lack the specialized technical bandwidth necessary to architect and deploy practical, reliable workflow systems without derailing daily operations.
+
+## Alternate AI Transformation Matrix
+
+| Business Problem | AI Solution | Outcome |
+|---|---|---|
+| Slow content production | Generative model pipelines | Output scaled 10x without hiring |
+| Repetitive admin work | Orchestration bots (Zapier/n8n) | Hundreds of manual hours recovered |
+| Inconsistent workflows | Standardized AI SOP generation | Flawless, automated operational continuity |
+| Weak knowledge management | Internal RAG / Knowledge retrieval bots | Internal data accessible instantly |
+| Manual repurposing | Transcription + Extraction formatting | A single asset converts to 20 cross-platform pieces |
+| Poor lead follow-up | AI automated email triage | Zero latency qualification and routing |
+
+## Alternate Implementation Framework
+
+### The AJ Digital AI Implementation Framework™
+
+1. **Audit bottlenecks** — analyze current digital workflows to isolate tasks costing the company time.
+2. **Identify high-leverage use cases** — pinpoint where AI will provide the fastest, highest ROI.
+3. **Select the right tools** — curate the specific tech stack (ChatGPT, Claude, n8n), avoiding bloat.
+4. **Design simple workflows** — map logic paths for robust, failure-resistant automation.
+5. **Implement and test** — build the architecture, connect APIs, rigorously test outputs.
+6. **Train and optimize** — hand over SOPs and train the team to manage the system confidently.
+
+## Alternate Differentiation Matrix
+
+| Generic AI Consultant | AJ Digital |
+|---|---|
+| Strategy only | Strategy + deep technical implementation |
+| Broad tool suggestions | Delivering working systems |
+| Theoretical AI applications | Applied operational workflows |
+| Generic business use cases | Content and business-specific applied systems |
+
+## Alternate FAQ Phrasings
+
+- **How much does AI consulting cost?** AI consulting rates vary based on implementation complexity. A strategic roadmap or lightweight operational automation build might start at $2,000, while designing vast, deeply integrated company knowledge bases can exceed $10,000+.
+- **What tools do you recommend?** Tool recommendations are entirely dependent on your business logic. We frequently implement stacks that rely on OpenAI APIs, Claude, Descript for audio engineering, and n8n to choreograph complex webhook routing.
+- **Is AI consulting only for large companies?** No. Focused AI deployment can effectively simulate the output of three administrative hires, allowing small teams to operate at enterprise scale.
