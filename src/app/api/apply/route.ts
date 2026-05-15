@@ -3,9 +3,23 @@ import { ApplyFormSchema } from '@/lib/apply-schema';
 import { evaluateApplyQualification } from '@/lib/apply-qualification';
 import { sendBusinessNotification } from '@/lib/email';
 import { getSupabaseAdmin } from '@/lib/supabase';
+import { clientIp, rateLimit } from '@/lib/rate-limit';
 
 export async function POST(request: Request) {
   try {
+    const limit = rateLimit(`apply:${clientIp(request)}`, 5, 60_000);
+    if (!limit.allowed) {
+      return NextResponse.json(
+        { success: false, message: 'Too many requests. Please try again shortly.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': Math.max(1, Math.ceil((limit.resetAt - Date.now()) / 1000)).toString(),
+          },
+        }
+      );
+    }
+
     const rawBody = await request.json();
 
     const parsed = ApplyFormSchema.safeParse(rawBody);
