@@ -1,0 +1,14 @@
+# Gitleaks configuration for weareajdigital.com
+# Extends the default ruleset and allowlists .env.example,
+# which intentionally ships placeholder env keys with no values.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Global allowlist"
+paths = [
+  '''(^|/)\.env\.example$''',
+  '''(^|/)package-lock\.json$''',
+  '''(^|/)pnpm-lock\.yaml$''',
+]
