@@ -84,7 +84,7 @@ Submitted: ${new Date().toISOString()}
 }
 
 export async function sendDiagnosticNotification(payload: LeadPayload) {
-  const subject = `New Applied Intellisystems Diagnostic - ${payload.lead.name} - ${payload.assessment.tier}`;
+  const subject = `New Founder Intelligence Systems Diagnostic - ${payload.lead.name} - ${payload.assessment.tier}`;
   const categoryScores = Object.entries(payload.assessment.categoryScores)
     .map(([category, score]) => `${category}: ${score}`)
     .join("\n");
@@ -93,7 +93,7 @@ export async function sendDiagnosticNotification(payload: LeadPayload) {
     .join("\n");
 
   const textBody = `
-NEW APPLIED INTELLISYSTEMS DIAGNOSTIC:
+NEW FOUNDER INTELLIGENCE SYSTEMS DIAGNOSTIC:
 
 IDENTITY
 -------------

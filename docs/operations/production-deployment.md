@@ -48,11 +48,11 @@ vercel deploy --prod
 After deployment, verify these routes:
 
 ```text
-https://weareajdigital.com/applied-intelligence
-https://weareajdigital.com/applied-intelligence/diagnostic
-https://weareajdigital.com/applied-intelligence/results/hot
-https://weareajdigital.com/applied-intelligence/results/warm
-https://weareajdigital.com/applied-intelligence/results/cold
+https://weareajdigital.com/founder-intelligence
+https://weareajdigital.com/founder-intelligence/diagnostic
+https://weareajdigital.com/founder-intelligence/results/hot
+https://weareajdigital.com/founder-intelligence/results/warm
+https://weareajdigital.com/founder-intelligence/results/cold
 ```
 
 Submit a diagnostic test lead and confirm one of these capture paths:

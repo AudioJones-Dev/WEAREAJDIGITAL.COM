@@ -5,7 +5,7 @@ export type CTA = {
   href: string;
 };
 
-export type AppliedIntellisystemsSiteConfig = {
+export type FounderIntelligenceSystemsSiteConfig = {
   meta: {
     title: string;
     description: string;

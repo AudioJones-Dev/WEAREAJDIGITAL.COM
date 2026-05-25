@@ -20,7 +20,7 @@ This project does **not** use Prisma, Firebase, or Whop. If you see references t
 - `src/components/` — Reusable React components. Prefer functional + Tailwind.
 - `src/lib/` — Shared utilities, API clients, schema validators (`apply-schema.ts`, `assessment.ts`, etc.).
 - `src/data/` — Static content collections consumed by pages.
-- `src/content/` — JSON config used by feature pages (e.g. Applied Intellisystems).
+- `src/content/` — JSON config used by feature pages (e.g. Founder Intelligence Systems).
 - `src/types/` — Shared TypeScript types, including generated Supabase types.
 - `sanity/` — Sanity Studio config and schema types.
 - `supabase/` — Local Supabase config and SQL migrations.
