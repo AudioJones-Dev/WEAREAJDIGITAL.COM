@@ -3,7 +3,7 @@ import type {
   AssessmentAnswerMap,
   CategoryScores,
   ResultTier,
-} from "@/types/applied-intellisystems";
+} from "@/types/founder-intelligence-systems";
 
 export function calculateRawScore(
   answers: AssessmentAnswerMap,
@@ -102,7 +102,7 @@ export function buildLeadPayload(
       openResponse: result.openResponse,
     },
     tracking: {
-      pagePath: "/applied-intelligence/diagnostic",
+      pagePath: "/founder-intelligence/diagnostic",
       submittedAt: new Date().toISOString(),
       ...tracking,
     },

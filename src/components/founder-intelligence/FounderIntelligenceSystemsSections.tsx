@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { AppliedIntellisystemsSiteConfig, CTA } from "@/types/applied-intellisystems";
+import type { FounderIntelligenceSystemsSiteConfig, CTA } from "@/types/founder-intelligence-systems";
 
 // ── Primitives ────────────────────────────────────────────────────────────────
 
@@ -67,10 +67,10 @@ function Card({
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
 
-export function AppliedIntellisystemsHero({
+export function FounderIntelligenceSystemsHero({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#05070F] px-6 pb-20 pt-10 text-[#F8FAFC] sm:px-8 lg:px-12 lg:pb-28">
@@ -148,7 +148,7 @@ export function AppliedIntellisystemsHero({
 export function ProblemSection({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#05070F] text-white">
@@ -185,7 +185,7 @@ export function ProblemSection({
 export function AssessmentIntro({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#071024] text-white">
@@ -228,7 +228,7 @@ export function AssessmentIntro({
 export function DiagnosticFrame({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#05070F] text-white">
@@ -253,12 +253,12 @@ export function DiagnosticFrame({
   );
 }
 
-// ── Applied Intellisystems™ Model ─────────────────────────────────────────────
+// ── Founder Intelligence Systems Model ─────────────────────────────────────────────
 
-export function AppliedIntellisystemsModel({
+export function FounderIntelligenceSystemsModel({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section id={config.model.id} className="bg-[#071024] text-white">
@@ -295,7 +295,7 @@ export function AppliedIntellisystemsModel({
 export function WhatWeBuild({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#05070F] text-white">
@@ -326,7 +326,7 @@ export function WhatWeBuild({
 export function ExecutionLayer({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#071024] text-white">
@@ -362,7 +362,7 @@ export function ExecutionLayer({
 export function WhyAJDigital({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#05070F] text-white">
@@ -394,7 +394,7 @@ export function WhyAJDigital({
 export function BestFitEngagements({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section id="fit" className="bg-[#071024] text-white">
@@ -438,7 +438,7 @@ export function BestFitEngagements({
 export function DiagnosticOffer({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#05070F] text-white">
@@ -475,7 +475,7 @@ export function DiagnosticOffer({
 export function FinalCTA({
   config,
 }: {
-  config: AppliedIntellisystemsSiteConfig;
+  config: FounderIntelligenceSystemsSiteConfig;
 }) {
   return (
     <Section className="bg-[#05070F] pb-28 text-white">

@@ -9,6 +9,25 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/applied-intelligence',
+        destination: '/founder-intelligence',
+        permanent: true,
+      },
+      {
+        source: '/applied-intelligence/diagnostic',
+        destination: '/founder-intelligence/diagnostic',
+        permanent: true,
+      },
+      {
+        source: '/applied-intelligence/results/:tier',
+        destination: '/founder-intelligence/results/:tier',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

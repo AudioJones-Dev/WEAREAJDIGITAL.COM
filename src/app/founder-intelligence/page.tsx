@@ -1,35 +1,35 @@
 import type { Metadata } from "next";
-import config from "@/content/applied-intellisystems-site-config.json";
-import type { AppliedIntellisystemsSiteConfig } from "@/types/applied-intellisystems";
+import config from "@/content/founder-intelligence-systems-site-config.json";
+import type { FounderIntelligenceSystemsSiteConfig } from "@/types/founder-intelligence-systems";
 import {
-  AppliedIntellisystemsHero,
+  FounderIntelligenceSystemsHero,
   ProblemSection,
   AssessmentIntro,
   DiagnosticFrame,
-  AppliedIntellisystemsModel,
+  FounderIntelligenceSystemsModel,
   WhatWeBuild,
   ExecutionLayer,
   WhyAJDigital,
   BestFitEngagements,
   DiagnosticOffer,
   FinalCTA,
-} from "@/components/applied-intelligence/AppliedIntellisystemsSections";
+} from "@/components/founder-intelligence/FounderIntelligenceSystemsSections";
 
-const pageConfig = config as AppliedIntellisystemsSiteConfig;
+const pageConfig = config as FounderIntelligenceSystemsSiteConfig;
 
 export const metadata: Metadata = {
   title: pageConfig.meta.title,
   description: pageConfig.meta.description,
 };
 
-export default function AppliedIntelligencePage() {
+export default function FounderIntelligencePage() {
   return (
     <main className="min-h-screen bg-[#05070F]">
-      <AppliedIntellisystemsHero config={pageConfig} />
+      <FounderIntelligenceSystemsHero config={pageConfig} />
       <ProblemSection config={pageConfig} />
       <AssessmentIntro config={pageConfig} />
       <DiagnosticFrame config={pageConfig} />
-      <AppliedIntellisystemsModel config={pageConfig} />
+      <FounderIntelligenceSystemsModel config={pageConfig} />
       <WhatWeBuild config={pageConfig} />
       <ExecutionLayer config={pageConfig} />
       <WhyAJDigital config={pageConfig} />

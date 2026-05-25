@@ -1,8 +1,8 @@
 {
   "assessment": {
-    "id": "applied-intellisystems-diagnostic",
-    "title": "Applied Intellisystems™ Diagnostic",
-    "route": "/applied-intelligence/diagnostic",
+    "id": "founder-intelligence-systems-diagnostic",
+    "title": "Founder Intelligence Systems Diagnostic",
+    "route": "/founder-intelligence/diagnostic",
     "estimated_time": "3–5 minutes",
     "scoring_model": {
       "type": "single_select_weighted",
@@ -16,7 +16,7 @@
           "label": "Scale-Ready Constraint",
           "min": 75,
           "max": 100,
-          "route": "/applied-intelligence/results/hot",
+          "route": "/founder-intelligence/results/hot",
           "primary_cta": "Request Strategic Diagnostic"
         },
         {
@@ -24,7 +24,7 @@
           "label": "System Alignment Opportunity",
           "min": 45,
           "max": 74,
-          "route": "/applied-intelligence/results/warm",
+          "route": "/founder-intelligence/results/warm",
           "primary_cta": "Book a Fit Review"
         },
         {
@@ -32,7 +32,7 @@
           "label": "Foundation-Building Stage",
           "min": 0,
           "max": 44,
-          "route": "/applied-intelligence/results/cold",
+          "route": "/founder-intelligence/results/cold",
           "primary_cta": "Get the Systems Readiness Guide"
         }
       ]
@@ -230,11 +230,11 @@
       ],
       "primary_cta": {
         "label": "Request Strategic Diagnostic",
-        "href": "/apply?source=applied-intelligence&result=hot"
+        "href": "/apply?source=founder-intelligence&result=hot"
       },
       "secondary_cta": {
         "label": "Explore the Model Again",
-        "href": "/applied-intelligence#model"
+        "href": "/founder-intelligence#model"
       }
     },
     "warm": {
@@ -248,11 +248,11 @@
       ],
       "primary_cta": {
         "label": "Book a Fit Review",
-        "href": "/apply?source=applied-intelligence&result=warm"
+        "href": "/apply?source=founder-intelligence&result=warm"
       },
       "secondary_cta": {
         "label": "Review Best-Fit Criteria",
-        "href": "/applied-intelligence#fit"
+        "href": "/founder-intelligence#fit"
       }
     },
     "cold": {
@@ -266,11 +266,11 @@
       ],
       "primary_cta": {
         "label": "Get the Systems Readiness Guide",
-        "href": "/resources?source=applied-intelligence&result=cold"
+        "href": "/resources?source=founder-intelligence&result=cold"
       },
       "secondary_cta": {
         "label": "Return to the Diagnostic Page",
-        "href": "/applied-intelligence"
+        "href": "/founder-intelligence"
       }
     }
   }

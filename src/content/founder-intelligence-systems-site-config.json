@@ -1,31 +1,31 @@
 {
   "meta": {
-    "title": "Applied Intellisystems™ | AJ DIGITAL",
-    "description": "AJ DIGITAL builds Applied Intellisystems™ that help companies identify and remove the constraints blocking scale.",
-    "path": "/applied-intelligence"
+    "title": "Founder Intelligence Systems | AJ DIGITAL",
+    "description": "AJ DIGITAL builds Founder Intelligence Systems that help companies identify and remove the constraints blocking scale.",
+    "path": "/founder-intelligence"
   },
   "brand": {
     "name": "AJ DIGITAL",
-    "category": "Applied Intellisystems™",
-    "definition": "Applied Intellisystems™ are structured business systems that turn signal into execution and measurable growth.",
-    "one_liner": "AJ DIGITAL builds Applied Intellisystems™ that identify and remove the constraints blocking scale."
+    "category": "Founder Intelligence Systems",
+    "definition": "Founder Intelligence Systems are structured business systems that turn signal into execution and measurable growth.",
+    "one_liner": "AJ DIGITAL builds Founder Intelligence Systems that identify and remove the constraints blocking scale."
   },
   "conversion_model": {
     "type": "assessment_funnel",
     "primary_path": "Landing Page → Diagnostic → Dynamic Result → Apply",
     "primary_cta": "Start the Strategic Diagnostic",
     "secondary_cta": "Explore the Model",
-    "assessment_route": "/applied-intelligence/diagnostic",
-    "results_route": "/applied-intelligence/results"
+    "assessment_route": "/founder-intelligence/diagnostic",
+    "results_route": "/founder-intelligence/results"
   },
   "hero": {
-    "eyebrow": "Applied Intellisystems™",
+    "eyebrow": "Founder Intelligence Systems",
     "headline": "Find the Constraint Blocking Your Company’s Growth",
-    "subheadline": "Take the Applied Intellisystems™ Diagnostic to identify whether your biggest bottleneck is product clarity, positioning, GTM, operations, data, or AI system design.",
+    "subheadline": "Take the Founder Intelligence Systems Diagnostic to identify whether your biggest bottleneck is product clarity, positioning, GTM, operations, data, or AI system design.",
     "supporting": "Not a marketing agency. Not a dev shop. A system execution partner for companies building something real.",
     "primary_cta": {
       "label": "Start the Strategic Diagnostic",
-      "href": "/applied-intelligence/diagnostic"
+      "href": "/founder-intelligence/diagnostic"
     },
     "secondary_cta": {
       "label": "Explore the Model",
@@ -47,7 +47,7 @@
     "key_line": "Scaling a broken system only amplifies the leaks."
   },
   "assessment_intro": {
-    "heading": "Take the Applied Intellisystems™ Diagnostic",
+    "heading": "Take the Founder Intelligence Systems Diagnostic",
     "copy": "Answer 15 questions to reveal where your business system is leaking signal, slowing execution, or blocking scale.",
     "measures": [
       "Product clarity",
@@ -58,7 +58,7 @@
     ],
     "cta": {
       "label": "Start Diagnostic",
-      "href": "/applied-intelligence/diagnostic"
+      "href": "/founder-intelligence/diagnostic"
     }
   },
   "diagnostic_frame": {
@@ -75,8 +75,8 @@
   },
   "model": {
     "id": "model",
-    "heading": "The Applied Intellisystems™ Model",
-    "copy": "Applied Intellisystems™ turns scattered business activity into an intelligent operating system.",
+    "heading": "The Founder Intelligence Systems Model",
+    "copy": "Founder Intelligence Systems turns scattered business activity into an intelligent operating system.",
     "layers": [
       {
         "name": "Signal",
@@ -142,7 +142,7 @@
     ]
   },
   "execution_layer": {
-    "heading": "Powered by Our Applied Intellisystems™ Execution Layer",
+    "heading": "Powered by Our Founder Intelligence Systems Execution Layer",
     "description": "AJ DIGITAL is building an internal execution layer designed to help businesses move from scattered tools to structured intelligence.",
     "positioning_note": "This should not be framed as a finished SaaS product. It is AJ DIGITAL’s internal execution layer for building smarter client systems.",
     "capabilities": [
@@ -202,7 +202,7 @@
     ],
     "cta": {
       "label": "Start the Strategic Diagnostic",
-      "href": "/applied-intelligence/diagnostic"
+      "href": "/founder-intelligence/diagnostic"
     }
   },
   "final_cta": {
@@ -210,7 +210,7 @@
     "subheadline": "The goal is not more activity. The goal is a system that compounds.",
     "cta": {
       "label": "Start the Diagnostic",
-      "href": "/applied-intelligence/diagnostic"
+      "href": "/founder-intelligence/diagnostic"
     }
   }
 }

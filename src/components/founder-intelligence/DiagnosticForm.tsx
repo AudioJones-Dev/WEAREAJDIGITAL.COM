@@ -6,7 +6,7 @@ import type {
   AssessmentConfig,
   AssessmentAnswerMap,
   LeadData,
-} from "@/types/applied-intellisystems";
+} from "@/types/founder-intelligence-systems";
 import {
   calculateRawScore,
   calculateCategoryScores,
@@ -154,7 +154,7 @@ function LeadCaptureStep({
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <Eyebrow>Applied Intellisystems™ Diagnostic</Eyebrow>
+        <Eyebrow>Founder Intelligence Systems Diagnostic</Eyebrow>
         <h2 className="text-2xl font-semibold tracking-[-0.03em] text-white sm:text-3xl">
           Let&apos;s start with a few quick details
         </h2>
@@ -396,10 +396,10 @@ export default function DiagnosticForm({
         throw new Error("Diagnostic capture failed");
       }
 
-      router.push(`/applied-intelligence/results/${tier}?score=${normalizedScore}`);
+      router.push(`/founder-intelligence/results/${tier}?score=${normalizedScore}`);
     } catch (err) {
       if (process.env.NODE_ENV !== "production") {
-        console.error("[Applied Intellisystems™ Diagnostic] Submission failed", err);
+        console.error("[Founder Intelligence Systems Diagnostic] Submission failed", err);
       }
       setSubmissionError(
         "We could not submit your diagnostic. Please try again."

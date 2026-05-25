@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import assessmentConfig from "@/content/applied-intellisystems-assessment-config.json";
-import type { AssessmentConfig } from "@/types/applied-intellisystems";
+import assessmentConfig from "@/content/founder-intelligence-systems-assessment-config.json";
+import type { AssessmentConfig } from "@/types/founder-intelligence-systems";
 
 const config = assessmentConfig as AssessmentConfig;
 const VALID_TIERS = ["hot", "warm", "cold"] as const;
@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!VALID_TIERS.includes(tier as Tier)) return {};
   const page = config.result_pages[tier as Tier];
   return {
-    title: `${page.tier_label} | Applied Intellisystems™ Diagnostic`,
+    title: `${page.tier_label} | Founder Intelligence Systems Diagnostic`,
     description: page.summary,
   };
 }
@@ -90,13 +90,13 @@ export default async function ResultPage({
       {/* Minimal nav */}
       <header className="flex items-center justify-between px-6 py-6 sm:px-8 lg:px-12">
         <Link
-          href="/applied-intelligence"
+          href="/founder-intelligence"
           className="text-sm font-bold tracking-[0.24em] text-white hover:text-[#C8A96A] transition-colors"
         >
           AJ DIGITAL
         </Link>
         <Link
-          href="/applied-intelligence/diagnostic"
+          href="/founder-intelligence/diagnostic"
           className="text-xs font-semibold text-[#94A3B8] transition hover:text-white"
         >
           Retake Diagnostic
@@ -161,7 +161,7 @@ export default async function ResultPage({
 
         {/* Footer note */}
         <p className="mt-8 text-center text-xs text-[#94A3B8]">
-          Applied Intellisystems™ Diagnostic by AJ DIGITAL. Free and private.
+          Founder Intelligence Systems Diagnostic by AJ DIGITAL. Free and private.
         </p>
       </main>
     </div>
