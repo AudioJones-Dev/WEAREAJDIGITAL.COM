@@ -194,36 +194,36 @@ export default function AIConsultingMiamiPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-1">
       <JsonLd data={jsonLd} />
 
-      <section className="border-b border-neutral-900 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.26),_transparent_45%),linear-gradient(180deg,#05070a_0%,#000_100%)] px-6 pb-16 pt-28 sm:px-12 lg:px-24">
+      <section className="border-b border-border-subtle bg-[radial-gradient(circle_at_top,_rgba(232,255,90,0.12),_transparent_45%),linear-gradient(180deg,var(--surface-1)_0%,var(--bg-base)_100%)] px-5 pb-16 pt-28 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+          <p className="t-label mb-4">
             AI Consulting Miami
           </p>
-          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+          <h1 className="t-h1 max-w-4xl">
             AI Consulting in Miami for Entrepreneurs and Small Businesses
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
+          <p className="mt-6 max-w-3xl t-lead text-fg-1">
             We help Miami-based businesses turn AI into practical systems that
             improve workflows, content production, and day-to-day execution.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/apply"
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal"
             >
               Apply for a Strategy Session
             </Link>
             <Link
               href="/services/ai-consulting/"
-              className="inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-white transition-colors hover:border-neutral-500 hover:bg-neutral-900"
+              className="aj-btn-intel"
             >
               Explore AI Consulting
             </Link>
           </div>
-          <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-neutral-400">
+          <div className="mt-6 flex flex-wrap gap-5 t-mono text-fg-2">
             <span>No hype</span>
             <span>No theory-only consulting</span>
             <span>Just practical systems and implementation</span>
@@ -231,12 +231,12 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What AI consulting services are available in Miami?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AI consulting Miami services can range from broad strategic advice
             to hands-on implementation. AJ Digital focuses on practical support
             for entrepreneurs and small businesses across Miami and South
@@ -246,12 +246,12 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             Who is AI consulting for in Miami?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AI consulting for small business Miami operators is most valuable
             when the team has clear bottlenecks but no clean implementation
             path.
@@ -260,21 +260,21 @@ export default function AIConsultingMiamiPage() {
             {audienceSegments.map((segment) => (
               <div
                 key={segment.title}
-                className="rounded-3xl border border-neutral-800 bg-black p-6"
+                className="aj-card"
               >
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="t-h4">
                   {segment.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-neutral-400">
-                  <strong className="text-white">Common bottleneck:</strong>{" "}
+                <p className="mt-4 t-small text-fg-2">
+                  <strong className="text-fg-0">Common bottleneck:</strong>{" "}
                   {segment.bottleneck}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
-                  <strong className="text-white">What AI can improve:</strong>{" "}
+                <p className="mt-3 t-small text-fg-2">
+                  <strong className="text-fg-0">What AI can improve:</strong>{" "}
                   {segment.improvement}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
-                  <strong className="text-white">How AJ Digital fits:</strong>{" "}
+                <p className="mt-3 t-small text-fg-2">
+                  <strong className="text-fg-0">How AJ Digital fits:</strong>{" "}
                   {segment.fit}
                 </p>
               </div>
@@ -283,26 +283,26 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What problems does AI consulting solve for Miami businesses?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             The best AI consultant Miami businesses can hire solves operational
             friction, not abstract curiosity. The table below shows the most
             common problems and the type of system AJ Digital helps implement.
           </p>
-          <div className="mt-8 overflow-x-auto rounded-3xl border border-neutral-800">
-            <table className="min-w-full divide-y divide-neutral-800 text-left">
-              <thead className="bg-black">
-                <tr className="text-sm uppercase tracking-[0.2em] text-neutral-500">
+          <div className="mt-8 overflow-x-auto rounded-card border border-border-subtle">
+            <table className="min-w-full divide-y divide-[color:var(--border-subtle)] text-left">
+              <thead className="bg-bg-3">
+                <tr className="t-label">
                   <th className="px-5 py-4">Business problem</th>
                   <th className="px-5 py-4">AI solution</th>
                   <th className="px-5 py-4">Outcome</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-neutral-800 bg-neutral-950 text-sm text-neutral-300">
+              <tbody className="divide-y divide-[color:var(--border-subtle)] bg-bg-2 text-sm text-fg-1">
                 {problemRows.map((row) => (
                   <tr key={row[0]}>
                     {row.map((cell) => (
@@ -318,12 +318,12 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What does AJ Digital actually help Miami clients implement?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AJ Digital is an AI automation consultant Miami businesses can use
             for implementation, not just recommendations. We build practical
             systems around content, research, knowledge management, and repeatable
@@ -333,50 +333,50 @@ export default function AIConsultingMiamiPage() {
             {implementationExamples.map((example) => (
               <li
                 key={example}
-                className="rounded-2xl border border-neutral-800 bg-black px-5 py-4 text-neutral-300"
+                className="rounded-md border border-border-subtle bg-bg-2 px-5 py-4 text-fg-1"
               >
                 {example}
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-col gap-3 text-sm font-semibold text-blue-400">
-            <Link href="/services/ai-consulting/">
+          <div className="mt-8 flex flex-col gap-3 text-sm font-semibold text-fg-1">
+            <Link href="/services/ai-consulting/" className="hover:text-signal-yellow transition-colors">
               Explore the full AI consulting service
             </Link>
-            <Link href="/services/content-systems/">
+            <Link href="/services/content-systems/" className="hover:text-signal-yellow transition-colors">
               See how content systems connect to implementation
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             How does our AI consulting process work?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             The AJ Digital Miami AI Implementation Framework keeps AI strategy
             consulting Miami businesses can actually act on tied to practical
             execution.
           </p>
-          <div className="mt-8 rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/30 to-neutral-950 p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+          <div className="mt-8 rounded-card border border-border-subtle border-l-[3px] border-l-signal-yellow bg-[linear-gradient(90deg,rgba(232,255,90,0.08),transparent),var(--surface-1)] p-8">
+            <p className="t-label">
               The AJ Digital Miami AI Implementation Framework™
             </p>
             <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {frameworkSteps.map((step, index) => (
                 <div
                   key={step.title}
-                  className="rounded-2xl border border-neutral-800 bg-black/60 p-5"
+                  className="rounded-md border border-border-subtle bg-bg-3 p-5"
                 >
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+                  <p className="t-label !text-signal-yellow">
                     Step {index + 1}
                   </p>
-                  <h3 className="mt-3 text-xl font-semibold text-white">
+                  <h3 className="mt-3 t-h4">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-neutral-400">
+                  <p className="mt-3 t-small text-fg-2">
                     {step.copy}
                   </p>
                 </div>
@@ -386,18 +386,18 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             Why choose AJ Digital for AI consulting in Miami?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AJ Digital understands the pace of Miami and South Florida
             operator-led businesses. Whether the team is based in Miami-Dade,
             Hialeah, Brickell, Doral, Broward, or Boca Raton, the goal stays
             the same: practical implementation that improves execution.
           </p>
-          <div className="mt-8 space-y-4 text-neutral-300">
+          <div className="mt-8 space-y-4 text-fg-1">
             <p>
               We do not sell abstract consulting with no operating reality
               behind it. We help build workflows that support content,
@@ -413,49 +413,49 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             How much does AI consulting cost in Miami?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AI consulting cost depends on scope, implementation depth, and
             whether the work is strategic, operational, or ongoing. The clearest
             way to think about cost is by engagement type.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="aj-card is-surface-2">
+              <h3 className="t-h4">
                 One-time strategy and system design
               </h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">
+              <p className="mt-3 t-small text-fg-2">
                 Best for businesses that need workflow analysis, use-case
                 prioritization, and a clear implementation roadmap.
               </p>
             </div>
-            <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="aj-card is-surface-2">
+              <h3 className="t-h4">
                 Implementation support
               </h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">
+              <p className="mt-3 t-small text-fg-2">
                 Best for businesses that need the workflows built, tested, and
                 connected to day-to-day operations.
               </p>
             </div>
-            <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="aj-card is-surface-2">
+              <h3 className="t-h4">
                 Ongoing optimization
               </h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">
+              <p className="mt-3 t-small text-fg-2">
                 Best for teams that want iteration, refinement, and support as
                 workflows expand.
               </p>
             </div>
           </div>
-          <p className="mt-8 text-neutral-300">
+          <p className="mt-8 text-fg-1">
             The right fit depends on the process being improved and the value of
             time reclaimed. The next step is to{" "}
-            <Link href="/apply" className="text-blue-400 hover:text-blue-300">
+            <Link href="/apply" className="text-fg-1 hover:text-signal-yellow transition-colors">
               apply for a strategy session
             </Link>
             .
@@ -463,7 +463,7 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-4 sm:px-12 lg:px-24">
+      <section className="px-5 py-4 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
           <InlineApplyCta
             eyebrow="Miami implementation"
@@ -476,21 +476,21 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             Frequently Asked Questions
           </h2>
           <div className="mt-8 space-y-5">
             {faqItems.map((item) => (
               <div
                 key={item.question}
-                className="rounded-3xl border border-neutral-800 bg-black p-6"
+                className="aj-card"
               >
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="t-h4">
                   {item.question}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
+                <p className="mt-3 t-small text-fg-2">
                   {item.answer}
                 </p>
               </div>
@@ -499,37 +499,37 @@ export default function AIConsultingMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/40 to-neutral-950 p-10 text-center">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+      <section className="px-5 py-20 sm:px-12 lg:px-24">
+        <div className="mx-auto max-w-4xl rounded-card border border-border-subtle bg-bg-2 p-10 text-center">
+          <h2 className="t-h2">
             Ready to implement AI that actually helps your business?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">
+          <p className="mx-auto mt-4 max-w-2xl text-fg-1">
             Get practical systems built around how your business actually
             works.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/apply"
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal"
             >
               Apply for a Strategy Session
             </Link>
             <Link
               href="/case-studies/"
-              className="inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-white transition-colors hover:border-neutral-500 hover:bg-neutral-900"
+              className="aj-btn-intel"
             >
               See proof
             </Link>
           </div>
-          <div className="mt-8 flex flex-col gap-2 text-sm font-semibold text-blue-400">
-            <Link href="/blog/ai-content-automation-guide/">
+          <div className="mt-8 flex flex-col gap-2 text-sm font-semibold text-fg-1">
+            <Link href="/blog/ai-content-automation-guide/" className="hover:text-signal-yellow transition-colors">
               Read the AI content automation guide
             </Link>
-            <Link href="/blog/ai-consulting-for-small-business/">
+            <Link href="/blog/ai-consulting-for-small-business/" className="hover:text-signal-yellow transition-colors">
               Learn how AI consulting works for small business
             </Link>
-            <Link href="/blog/ai-tools-for-entrepreneurs/">
+            <Link href="/blog/ai-tools-for-entrepreneurs/" className="hover:text-signal-yellow transition-colors">
               Review the AI tools we use in content systems
             </Link>
           </div>

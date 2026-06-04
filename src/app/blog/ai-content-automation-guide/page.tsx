@@ -94,17 +94,17 @@ export default function AIContentAutomationGuidePage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-0">
       <JsonLd data={jsonLd} />
       <main className="mx-auto max-w-5xl px-4 py-16 md:px-8">
-        <header className="mb-12 border-b border-neutral-800 pb-10">
-          <p className="text-sm text-neutral-400">
+        <header className="mb-12 border-b border-border-subtle pb-10">
+          <p className="t-mono text-fg-3">
             Published: April 2026 | Updated: April 2026 | By: Audio Jones | Reading Time: 16-18 min
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="t-h1 mt-4">
             The Complete Guide to AI Content Automation (2026)
           </h1>
-          <p className="mt-6 max-w-4xl text-xl leading-8 text-neutral-300">
+          <p className="t-lead mt-6 max-w-4xl text-fg-1">
             AI content automation is the process of using AI and workflow design to speed up research,
             production, repurposing, and publishing support. When businesses do it well, they create faster
             output, better consistency, lower manual workload, and scalable systems instead of relying on
@@ -113,12 +113,12 @@ export default function AIContentAutomationGuidePage() {
         </header>
 
         <article className="prose prose-invert max-w-none">
-          <div className="mb-10 rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-            <h2 className="mt-0 text-2xl font-bold text-white">Table of Contents</h2>
+          <div className="aj-card mb-10 p-6">
+            <h2 className="t-h3 mt-0">Table of Contents</h2>
             <ul className="mt-4 space-y-2">
               {tocItems.map(([id, label]) => (
                 <li key={id}>
-                  <a href={`#${id}`} className="text-blue-400 no-underline">
+                  <a href={`#${id}`} className="text-fg-1 no-underline hover:text-signal-yellow transition-colors">
                     {label}
                   </a>
                 </li>
@@ -126,8 +126,8 @@ export default function AIContentAutomationGuidePage() {
             </ul>
           </div>
 
-          <div className="mb-10 rounded-r-2xl border-l-4 border-blue-500 bg-neutral-950 p-5">
-            <p className="m-0 font-medium text-blue-400">Build the workflow behind the tools:</p>
+          <div className="aj-callout is-blue mb-10">
+            <p className="t-label m-0">Build the workflow behind the tools:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/services/ai-consulting/">Explore AI consulting</Link>
               <Link href="/services/content-systems/">See how AJ Digital builds content systems</Link>
@@ -257,20 +257,20 @@ export default function AIContentAutomationGuidePage() {
             a well-designed workflow.
           </p>
           <div className="overflow-x-auto">
-            <table className="min-w-full border-collapse border border-neutral-800">
-              <thead className="bg-neutral-900">
+            <table className="min-w-full border-collapse border border-border-subtle">
+              <thead className="bg-bg-3">
                 <tr>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Workflow Stage</th>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Manual Task</th>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">AI-Enabled Task</th>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Outcome</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Workflow Stage</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Manual Task</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">AI-Enabled Task</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Outcome</th>
                 </tr>
               </thead>
               <tbody>
                 {workflowRows.map((row) => (
                   <tr key={row[0]}>
                     {row.map((cell) => (
-                      <td key={cell} className="border border-neutral-800 px-4 py-3">
+                      <td key={cell} className="border border-border-subtle px-4 py-3">
                         {cell}
                       </td>
                     ))}
@@ -289,12 +289,12 @@ export default function AIContentAutomationGuidePage() {
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             {frameworkSteps.map(([title, copy], index) => (
-              <div key={title} className="rounded-2xl border border-neutral-800 bg-neutral-950 p-5">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+              <div key={title} className="aj-card p-5">
+                <p className="t-label">
                   Step {index + 1}
                 </p>
-                <h3 className="mt-3 text-xl font-bold text-white">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">{copy}</p>
+                <h3 className="t-h4 mt-3">{title}</h3>
+                <p className="t-body mt-3 text-fg-2">{copy}</p>
               </div>
             ))}
           </div>
@@ -405,22 +405,22 @@ export default function AIContentAutomationGuidePage() {
           <div className="space-y-6">
             {faqItems.map(([question, answer]) => (
               <div key={question}>
-                <h3 className="text-xl font-bold">{question}</h3>
-                <p className="m-0 text-neutral-300">{answer}</p>
+                <h3 className="t-h4">{question}</h3>
+                <p className="t-body m-0 text-fg-1">{answer}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 rounded-3xl border border-blue-500/20 bg-neutral-950 p-8 text-center">
-            <h2 className="mt-0 text-3xl font-bold">
+          <div className="aj-card mt-16 p-8 text-center">
+            <h2 className="t-h2 mt-0">
               Ready to build an AI content system that actually works?
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-300">
+            <p className="t-lead mx-auto max-w-2xl text-fg-1">
               Move beyond isolated tools and build a workflow that compounds.
             </p>
             <Link
               href="/apply"
-              className="mt-4 inline-flex rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal mt-4"
             >
               Apply for a Strategy Session
             </Link>

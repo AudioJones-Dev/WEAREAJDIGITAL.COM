@@ -20,12 +20,12 @@ export default function InlineApplyCta({
   trackingId = "inline-apply-cta",
 }: InlineApplyCtaProps) {
   return (
-    <div className="my-14 rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/30 to-neutral-950 p-8 not-prose">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+    <div className="aj-card my-14 p-8 not-prose">
+      <p className="t-label">
         {eyebrow}
       </p>
-      <h2 className="mt-3 text-3xl font-bold text-white">{headline}</h2>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-300">
+      <h2 className="t-h3 mt-3">{headline}</h2>
+      <p className="mt-4 max-w-2xl text-base leading-7 text-text-primary">
         {copy}
       </p>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -34,18 +34,18 @@ export default function InlineApplyCta({
           data-cta-location="mid-content"
           data-track={trackingId}
           data-ga-event="apply_strategy_session_click"
-          className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+          className="aj-btn-signal"
         >
           {ctaLabel}
         </Link>
         <Link
           href={secondaryHref}
-          className="inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-white transition-colors hover:border-neutral-500 hover:bg-black"
+          className="aj-btn-intel"
         >
           {secondaryLabel}
         </Link>
       </div>
-      <div className="mt-5 flex flex-wrap gap-4 text-sm text-neutral-500">
+      <div className="mt-5 flex flex-wrap gap-4 text-sm text-text-muted">
         <span>30+ assets from one recording</span>
         <span>Systems, not one-off deliverables</span>
         <span>Built for serious operators</span>

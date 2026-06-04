@@ -84,45 +84,45 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-0">
       <JsonLd data={jsonLd} />
 
-      <section className="border-b border-neutral-900 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_45%),linear-gradient(180deg,#05070a_0%,#000_100%)] px-6 pb-16 pt-28 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-            {categoryData.label}
-          </p>
-          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+      <section className="relative overflow-hidden border-b border-border-subtle bg-bg-0 px-6 pb-16 pt-28 sm:px-12 lg:px-24">
+        <div
+          aria-hidden
+          className="bg-glow-signal pointer-events-none absolute inset-0"
+        />
+        <div className="relative mx-auto max-w-6xl">
+          <p className="t-label mb-4">{categoryData.label}</p>
+          <h1 className="t-h1 max-w-4xl">
             {categoryData.label} articles and playbooks
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300">
+          <p className="t-lead mt-6 max-w-3xl text-fg-1">
             {categoryData.description}
           </p>
         </div>
       </section>
 
       <section className="px-6 py-12 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-neutral-800 bg-neutral-950 p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
-            Start here
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold text-white">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-border-subtle bg-bg-2 p-8">
+          <p className="t-label">Start here</p>
+          <h2 className="t-h3 mt-4">
             {pillar?.title ?? `${categoryData.label} core guide`}
           </h2>
-          <p className="mt-3 max-w-3xl text-neutral-400">
+          <p className="t-body mt-3 max-w-3xl text-fg-2">
             Start with the pillar, then move into the supporting imported cluster articles below.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
               href={`/blog/${categoryData.pillarSlug}`}
-              className="inline-flex rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal"
             >
               Read the pillar guide
             </Link>
             {categoryData.serviceHref ? (
               <Link
                 href={categoryData.serviceHref}
-                className="inline-flex rounded-xl border border-neutral-700 px-5 py-3 font-semibold text-neutral-200 transition-colors hover:border-blue-500/40"
+                className="aj-btn-intel"
               >
                 Explore the related service
               </Link>
@@ -134,8 +134,8 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
       <section className="px-6 pb-12 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
-            <h2 className="text-3xl font-semibold text-white">Normalized article set</h2>
-            <p className="mt-2 text-neutral-400">
+            <h2 className="t-h2">Normalized article set</h2>
+            <p className="t-body mt-2 text-fg-2">
               {normalizedPosts.length} imported articles now mapped into the active blog routing system.
             </p>
           </div>
@@ -145,15 +145,15 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="flex h-full flex-col rounded-3xl border border-neutral-900 bg-neutral-950 p-6 transition-colors hover:border-blue-500/40"
+                className="aj-card flex h-full flex-col p-6"
               >
-                <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">
+                <div className="t-mono flex items-center justify-between text-fg-3">
                   <span>{categoryData.label}</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="mt-4 text-xl font-semibold text-white">{post.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-neutral-400">{post.description}</p>
-                <span className="mt-6 text-sm font-semibold text-blue-400">
+                <h3 className="t-h4 mt-4">{post.title}</h3>
+                <p className="t-body mt-3 flex-1 text-fg-2">{post.description}</p>
+                <span className="t-mono mt-6 text-signal-yellow">
                   Open article {"->"}
                 </span>
               </Link>
@@ -164,18 +164,18 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
 
       {additionalPosts.length > 0 ? (
         <section className="px-6 pb-12 sm:px-12 lg:px-24">
-          <div className="mx-auto max-w-6xl rounded-3xl border border-neutral-900 bg-black p-8">
-            <h2 className="text-2xl font-semibold text-white">Also in this topic</h2>
+          <div className="mx-auto max-w-6xl rounded-2xl border border-border-subtle bg-bg-0 p-8">
+            <h2 className="t-h3">Also in this topic</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {additionalPosts.map((post) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="rounded-2xl border border-neutral-800 bg-neutral-950 p-5 text-neutral-300 transition-colors hover:border-neutral-700"
+                  className="aj-card is-surface-2 p-5"
                 >
-                  <p className="text-sm font-semibold text-blue-400">Additional cluster</p>
-                  <h3 className="mt-2 text-lg font-semibold text-white">{post.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-neutral-400">{post.description}</p>
+                  <p className="t-label">Additional cluster</p>
+                  <h3 className="t-h4 mt-2 text-fg-0">{post.title}</h3>
+                  <p className="t-body mt-2 text-fg-2">{post.description}</p>
                 </Link>
               ))}
             </div>
@@ -184,16 +184,16 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
       ) : null}
 
       <section className="px-6 pb-24 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-neutral-800 bg-neutral-950 p-8">
-          <h2 className="text-3xl font-semibold text-white">Turn the topic into an implemented system</h2>
-          <p className="mt-3 max-w-3xl text-neutral-300">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-border-subtle bg-bg-2 p-8">
+          <h2 className="t-h2">Turn the topic into an implemented system</h2>
+          <p className="t-body mt-3 max-w-3xl text-fg-1">
             If you want help building the workflow behind these articles, start with the closest service path or apply for a strategy session.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             {categoryData.serviceHref ? (
               <Link
                 href={categoryData.serviceHref}
-                className="inline-flex rounded-xl border border-neutral-700 px-5 py-3 font-semibold text-neutral-200 transition-colors hover:border-blue-500/40"
+                className="aj-btn-intel"
               >
                 Explore the service
               </Link>
@@ -201,14 +201,14 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
             {categoryData.localHref ? (
               <Link
                 href={categoryData.localHref}
-                className="inline-flex rounded-xl border border-neutral-700 px-5 py-3 font-semibold text-neutral-200 transition-colors hover:border-blue-500/40"
+                className="aj-btn-intel"
               >
                 Explore the local page
               </Link>
             ) : null}
             <Link
               href="/apply"
-              className="inline-flex rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal"
             >
               Apply for a Strategy Session
             </Link>

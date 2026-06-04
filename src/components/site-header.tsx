@@ -38,16 +38,16 @@ export default function SiteHeader() {
   if (isStandalone) return null;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-neutral-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-bg-base/80 backdrop-blur-lg border-b border-border-subtle">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        
+
         {/* LEFT - Logo */}
         <div className="flex-shrink-0 flex items-center">
-          <Link 
-            href="/" 
-            className="text-xl font-black tracking-tighter text-white hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+          <Link
+            href="/"
+            className="aj-wordmark text-xl hover:text-signal-yellow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
           >
-            AJ<span className="text-blue-500">DIGITAL</span>
+            AJ<span className="aj-wordmark--accent">DIGITAL</span>
           </Link>
         </div>
 
@@ -65,8 +65,8 @@ export default function SiteHeader() {
                 <div key={item.title} className="relative">
                   <button
                     onClick={() => setOpenDropdown(isOpen ? null : item.title)}
-                    className={`px-4 py-2 text-sm font-semibold rounded-md flex items-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
-                      isOpen ? "text-white bg-neutral-900" : "text-neutral-400 hover:text-white hover:bg-neutral-900"
+                    className={`px-4 py-2 text-sm font-semibold rounded-md flex items-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue ${
+                      isOpen ? "text-fg-0 bg-surface-1" : "text-fg-2 hover:text-fg-0 hover:bg-surface-1"
                     }`}
                     aria-expanded={isOpen}
                     aria-haspopup="true"
@@ -82,10 +82,10 @@ export default function SiteHeader() {
 
                   {/* Dropdown Content */}
                   {isOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-[400px] bg-neutral-950 border border-neutral-800 rounded-xl shadow-2xl p-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-[400px] bg-surface-1 border border-border-subtle rounded-lg shadow-[var(--shadow-card)] p-2 z-50">
                       {item.description && (
-                        <div className="px-4 py-3 mb-2 border-b border-neutral-900">
-                          <p className="text-xs font-bold text-blue-500 uppercase tracking-wider">{item.description}</p>
+                        <div className="px-4 py-3 mb-2 border-b border-border-subtle">
+                          <p className="t-label">{item.description}</p>
                         </div>
                       )}
                       <ul className="flex flex-col gap-1">
@@ -94,11 +94,11 @@ export default function SiteHeader() {
                             <Link
                               href={subItem.href || "#"}
                               onClick={() => setOpenDropdown(null)}
-                              className="block p-3 rounded-lg hover:bg-neutral-900 transition-colors focus-visible:outline-none focus-visible:bg-neutral-900"
+                              className="block p-3 rounded-lg hover:bg-surface-2 transition-colors focus-visible:outline-none focus-visible:bg-surface-2"
                             >
-                              <div className="font-semibold text-white text-sm">{subItem.title}</div>
+                              <div className="font-semibold text-fg-0 text-sm">{subItem.title}</div>
                               {subItem.description && (
-                                <p className="text-xs text-neutral-500 mt-1">{subItem.description}</p>
+                                <p className="text-xs text-text-muted mt-1">{subItem.description}</p>
                               )}
                             </Link>
                           </li>
@@ -115,7 +115,7 @@ export default function SiteHeader() {
               <Link
                 key={item.title}
                 href={item.href || "#"}
-                className="px-4 py-2 text-sm font-semibold text-neutral-400 rounded-md transition-colors hover:text-white hover:bg-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="px-4 py-2 text-sm font-semibold text-fg-2 rounded-md transition-colors hover:text-fg-0 hover:bg-surface-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
               >
                 {item.title}
               </Link>
@@ -125,17 +125,17 @@ export default function SiteHeader() {
 
         {/* RIGHT - CTAs */}
         <div className="hidden lg:flex items-center gap-6">
-          <Link 
-            href="/case-studies" 
-            className="text-sm font-semibold text-neutral-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:underline"
+          <Link
+            href="/case-studies"
+            className="text-sm font-semibold text-fg-2 hover:text-fg-0 transition-colors focus-visible:outline-none focus-visible:underline"
           >
             Case Studies
           </Link>
-          <Link 
-            href="/apply" 
+          <Link
+            href="/apply"
             data-track="global-header-apply-cta"
             data-ga-event="apply_strategy_session_click"
-            className="px-5 py-2.5 text-sm font-bold bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            className="aj-btn-signal"
           >
             Apply for a Strategy Session
           </Link>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/json-ld";
 import {
@@ -50,18 +50,20 @@ export default function BlogIndexPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-0">
       <JsonLd data={jsonLd} />
 
-      <section className="border-b border-neutral-900 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.28),_transparent_45%),linear-gradient(180deg,#05070a_0%,#000_100%)] px-6 pb-16 pt-28 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-            AJ Digital Blog
-          </p>
-          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+      <section className="relative overflow-hidden border-b border-border-subtle bg-bg-0 px-6 pb-16 pt-28 sm:px-12 lg:px-24">
+        <div
+          aria-hidden
+          className="bg-glow-signal pointer-events-none absolute inset-0"
+        />
+        <div className="relative mx-auto max-w-6xl">
+          <p className="t-label mb-4">AJ Digital Blog</p>
+          <h1 className="t-h1 max-w-4xl">
             Pillar guides and system playbooks for authority-driven growth
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300">
+          <p className="t-lead mt-6 max-w-3xl text-fg-1">
             This library covers podcast production, content repurposing, AI
             automation, and commercial workflows built for serious operators.
           </p>
@@ -74,7 +76,7 @@ export default function BlogIndexPage() {
             <Link
               key={category.slug}
               href={`/blog/category/${category.slug}`}
-              className="rounded-full border border-neutral-800 bg-neutral-950 px-4 py-2 text-sm font-medium text-neutral-300 transition-colors hover:border-blue-500/40 hover:text-white"
+              className="t-mono flex min-h-[44px] items-center rounded-full border border-border-subtle bg-bg-2 px-4 py-2 text-fg-1 transition-colors hover:border-signal-yellow hover:text-signal-yellow"
             >
               {category.label}
             </Link>
@@ -85,10 +87,8 @@ export default function BlogIndexPage() {
       <section className="px-6 pb-10 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
-            <h2 className="text-3xl font-semibold text-white md:text-4xl">
-              Featured articles
-            </h2>
-            <p className="mt-2 text-neutral-400">
+            <h2 className="t-h2">Featured articles</h2>
+            <p className="t-body mt-2 text-fg-2">
               Start with the pillar guides, then move into the supporting
               clusters and commercial-intent explainers.
             </p>
@@ -102,19 +102,15 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="rounded-3xl border border-neutral-900 bg-neutral-950 p-7 transition-colors hover:border-blue-500/50"
+                  className="aj-card flex flex-col p-7"
                 >
-                  <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
+                  <div className="t-label flex items-center justify-between text-signal-yellow">
                     <span>{category?.label ?? post.category}</span>
-                    <span>{post.readTime}</span>
+                    <span className="text-fg-3">{post.readTime}</span>
                   </div>
-                  <h3 className="mt-4 text-2xl font-semibold text-white">
-                    {post.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-neutral-400">
-                    {post.description}
-                  </p>
-                  <span className="mt-6 inline-flex text-sm font-semibold text-blue-400">
+                  <h3 className="t-h4 mt-4">{post.title}</h3>
+                  <p className="t-body mt-4 text-fg-2">{post.description}</p>
+                  <span className="t-mono mt-6 inline-flex text-signal-yellow">
                     Read article {"->"}
                   </span>
                 </Link>
@@ -127,10 +123,8 @@ export default function BlogIndexPage() {
       <section className="px-6 pb-24 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
-            <h2 className="text-3xl font-semibold text-white md:text-4xl">
-              All articles
-            </h2>
-            <p className="mt-2 text-neutral-400">
+            <h2 className="t-h2">All articles</h2>
+            <p className="t-body mt-2 text-fg-2">
               Browse the full cluster structure across podcast production, AI,
               and content systems.
             </p>
@@ -144,23 +138,21 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="flex h-full flex-col rounded-3xl border border-neutral-900 bg-black p-6 transition-colors hover:border-neutral-700"
+                  className="aj-card flex h-full flex-col p-6"
                 >
-                  <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">
+                  <div className="t-mono flex items-center justify-between text-fg-3">
                     <span>{category?.label ?? post.category}</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold text-white">
-                    {post.title}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-7 text-neutral-400">
+                  <h3 className="t-h4 mt-4">{post.title}</h3>
+                  <p className="t-body mt-3 flex-1 text-fg-2">
                     {post.description}
                   </p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-sm font-medium text-neutral-500">
+                    <span className="t-mono text-fg-3">
                       {post.pillar ? "Pillar guide" : "Cluster article"}
                     </span>
-                    <span className="text-sm font-semibold text-blue-400">
+                    <span className="t-mono text-signal-yellow">
                       Open {"->"}
                     </span>
                   </div>
@@ -169,41 +161,36 @@ export default function BlogIndexPage() {
             })}
           </div>
 
-          <div className="mt-16 rounded-3xl border border-neutral-800 bg-neutral-950 p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
-              Commercial path
-            </p>
+          <div className="mt-16 rounded-2xl border border-border-subtle bg-bg-2 p-8">
+            <p className="t-label">Commercial path</p>
             <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               <Link
                 href="/services/podcast-production"
-                className="rounded-2xl border border-neutral-800 bg-black p-5 text-neutral-300 transition-colors hover:border-blue-500/40"
+                className="t-body flex min-h-[44px] items-center rounded-2xl border border-border-subtle bg-bg-0 p-5 text-fg-1 transition-colors hover:border-accent-blue"
               >
                 Explore the podcast production service
               </Link>
               <Link
                 href="/services/ai-consulting"
-                className="rounded-2xl border border-neutral-800 bg-black p-5 text-neutral-300 transition-colors hover:border-blue-500/40"
+                className="t-body flex min-h-[44px] items-center rounded-2xl border border-border-subtle bg-bg-0 p-5 text-fg-1 transition-colors hover:border-accent-blue"
               >
                 Explore AI consulting services
               </Link>
               <Link
                 href="/services/content-systems"
-                className="rounded-2xl border border-neutral-800 bg-black p-5 text-neutral-300 transition-colors hover:border-blue-500/40"
+                className="t-body flex min-h-[44px] items-center rounded-2xl border border-border-subtle bg-bg-0 p-5 text-fg-1 transition-colors hover:border-accent-blue"
               >
                 Explore content systems services
               </Link>
               <Link
                 href="/case-studies/podcast-authority-system"
-                className="rounded-2xl border border-neutral-800 bg-black p-5 text-neutral-300 transition-colors hover:border-blue-500/40"
+                className="t-body flex min-h-[44px] items-center rounded-2xl border border-border-subtle bg-bg-0 p-5 text-fg-1 transition-colors hover:border-accent-blue"
               >
                 Review the podcast authority system case study
               </Link>
             </div>
             <div className="mt-6">
-              <Link
-                href="/apply"
-                className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
-              >
+              <Link href="/apply" className="aj-btn-signal">
                 Apply for a Strategy Session
               </Link>
             </div>

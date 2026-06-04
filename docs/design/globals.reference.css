@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ============================================================
    Audio Jones — Brand Guidelines 2.0 (May 2026)
@@ -18,12 +16,6 @@
    automatically without touching every call site.
 
    Canonical V2 palette / type values live in :root below.
-
-   NOTE (Tailwind v3 port): This repo uses Tailwind v3.4 with a JS
-   config, so the v4-only `@theme inline { ... }` bridge was removed.
-   Its job (mapping these CSS vars to utility classes) is handled by
-   tailwind.config.ts instead. The token definitions below are plain
-   CSS custom properties and work identically in v3.
    ============================================================ */
 
 /* ---------- FONTS (Google Fonts — Syne · DM Sans · DM Mono) ----------
@@ -221,6 +213,75 @@
   /* Layout aliases used by Tailwind theme */
   --background: var(--bg-0);
   --foreground: var(--fg-1);
+}
+
+/* ---------- TAILWIND v4 THEME BRIDGE ---------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* V2 canonical color names — preferred for new code. */
+  --color-signal-yellow:  var(--signal-yellow);
+  --color-signal-soft:    var(--signal-soft);
+  --color-bg-base:        var(--bg-base);
+  --color-surface-1:      var(--surface-1);
+  --color-surface-2:      var(--surface-2);
+  --color-border-subtle:  var(--border-subtle);
+  --color-border-strong:  var(--border-strong);
+  --color-text-primary:   var(--text-primary);
+  --color-text-muted:     var(--text-muted);
+  --color-accent-blue:    var(--accent-blue);
+  --color-accent-red:     var(--accent-red);
+  --color-accent-amber:   var(--accent-amber);
+  --color-accent-green:   var(--accent-green);
+
+  /* Legacy color aliases — retargeted to V2 values. */
+  --color-aj-orange:      var(--aj-orange);
+  --color-aj-orange-soft: var(--aj-orange-soft);
+  --color-aj-blue:        var(--aj-blue);
+  --color-aj-blue-bright: var(--aj-blue-bright);
+  --color-aj-gold:        var(--aj-gold);
+
+  --color-bg-0: var(--bg-0);
+  --color-bg-1: var(--bg-1);
+  --color-bg-2: var(--bg-2);
+  --color-bg-3: var(--bg-3);
+  --color-bg-4: var(--bg-4);
+
+  --color-bg-light-0: var(--bg-light-0);
+  --color-bg-light-1: var(--bg-light-1);
+  --color-bg-light-2: var(--bg-light-2);
+
+  --color-fg-0: var(--fg-0);
+  --color-fg-1: var(--fg-1);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+
+  --color-fg-light-0: var(--fg-light-0);
+  --color-fg-light-1: var(--fg-light-1);
+  --color-fg-light-2: var(--fg-light-2);
+
+  /* Canonical light-split tokens */
+  --color-paper:        var(--paper);
+  --color-surface:      var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-ink:          var(--ink);
+  --color-ink-muted:    var(--ink-muted);
+
+  /* Brand identity aliases */
+  --color-orange-primary: var(--orange-primary);
+  --color-blue-system:    var(--blue-system);
+  --color-dark-primary:   var(--dark-primary);
+  --color-dark-secondary: var(--dark-secondary);
+
+  --color-signal: var(--signal);
+  --color-system: var(--system);
+  --color-metric: var(--metric);
+
+  --font-headline: var(--font-headline);
+  --font-accent:   var(--font-accent);
+  --font-body:     var(--font-body);
+  --font-mono:     var(--font-mono);
 }
 
 /* ---------- BASE ---------- */
@@ -451,7 +512,7 @@ html, body {
 
 .aj-bg-signal-control-room {
   background:
-    linear-gradient(rgba(8, 8, 8, 0.18), rgba(8, 8, 8, 0.2)),
+    linear-gradient(rgba(5, 7, 15, 0.18), rgba(5, 7, 15, 0.2)),
     var(--aj-bg-image, none),
     var(--aj-gradient-signal-control-room);
   background-position: center;
@@ -460,7 +521,7 @@ html, body {
 
 .aj-bg-revenue-recovery {
   background:
-    linear-gradient(rgba(8, 8, 8, 0.2), rgba(8, 8, 8, 0.24)),
+    linear-gradient(rgba(5, 7, 15, 0.2), rgba(5, 7, 15, 0.24)),
     var(--aj-bg-image, none),
     var(--aj-gradient-revenue-recovery);
   background-position: center;
@@ -469,7 +530,7 @@ html, body {
 
 .aj-bg-intelligence-layer {
   background:
-    linear-gradient(rgba(8, 8, 8, 0.2), rgba(8, 8, 8, 0.22)),
+    linear-gradient(rgba(5, 7, 15, 0.2), rgba(5, 7, 15, 0.22)),
     var(--aj-bg-image, none),
     var(--aj-gradient-intelligence-layer);
   background-position: center;
@@ -478,7 +539,7 @@ html, body {
 
 .aj-bg-luxury-graphite {
   background:
-    linear-gradient(rgba(8, 8, 8, 0.16), rgba(8, 8, 8, 0.2)),
+    linear-gradient(rgba(5, 7, 15, 0.16), rgba(5, 7, 15, 0.2)),
     var(--aj-bg-image, none),
     var(--aj-gradient-luxury-graphite);
   background-position: center;
@@ -490,7 +551,7 @@ html, body {
 }
 
 .aj-bg-dark-diagnostic-grid {
-  background-color: var(--bg-base);
+  background-color: #05070f;
   background-image:
     var(--aj-bg-image, none),
     linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
@@ -516,7 +577,7 @@ html, body {
 
 .aj-bg-signal-noise {
   background:
-    linear-gradient(rgba(8, 8, 8, 0.18), rgba(8, 8, 8, 0.22)),
+    linear-gradient(rgba(5, 7, 15, 0.18), rgba(5, 7, 15, 0.22)),
     var(--aj-bg-image, none),
     var(--aj-gradient-signal-noise);
   background-position: center;
@@ -525,7 +586,7 @@ html, body {
 
 .aj-bg-workshop-amber {
   background:
-    linear-gradient(rgba(8, 8, 8, 0.18), rgba(8, 8, 8, 0.24)),
+    linear-gradient(rgba(5, 7, 15, 0.18), rgba(5, 7, 15, 0.24)),
     var(--aj-bg-image, none),
     var(--aj-gradient-workshop-amber);
   background-position: center;

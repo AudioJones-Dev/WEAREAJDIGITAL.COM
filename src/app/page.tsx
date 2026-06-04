@@ -115,7 +115,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="bg-surface-dim text-on-surface selection:bg-primary/20">
+    <div className="bg-bg-0 text-fg-1 selection:bg-signal-yellow/20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -125,15 +125,15 @@ export default function HomePage() {
       <Hero />
 
       {/* ── 2. TRUST STRIP ──────────────────────────────────────────────── */}
-      <section className="py-6 bg-surface-container">
+      <section className="py-6 bg-surface-1 border-y border-border-subtle">
         <Container>
-          <div className="flex flex-wrap justify-center sm:justify-between items-center gap-6 text-xs font-bold text-on-surface-variant uppercase tracking-[0.12em]">
+          <div className="flex flex-wrap justify-center sm:justify-between items-center gap-6 font-mono text-xs font-medium text-fg-2 uppercase tracking-[0.16em]">
             <span>30+ assets from one recording</span>
-            <span className="hidden sm:block w-1 h-1 rounded-full bg-outline-variant" />
+            <span className="hidden sm:block w-1 h-1 rounded-full bg-border-strong" />
             <span>Systems over random posting</span>
-            <span className="hidden md:block w-1 h-1 rounded-full bg-outline-variant" />
+            <span className="hidden md:block w-1 h-1 rounded-full bg-border-strong" />
             <span>Podcast + AI + Repurposing</span>
-            <span className="hidden lg:block w-1 h-1 rounded-full bg-outline-variant" />
+            <span className="hidden lg:block w-1 h-1 rounded-full bg-border-strong" />
             <span>Built for lead generation</span>
           </div>
         </Container>
@@ -152,26 +152,26 @@ export default function HomePage() {
       <HowItWorks />
 
       {/* ── 7. NOT AN AGENCY — DIFFERENTIATOR TABLE ─────────────────────── */}
-      <section className="py-32 bg-surface-container-low">
+      <section className="py-32 bg-bg-1">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-on-surface mb-4">
+            <h2 className="t-h2 mb-4">
               Not a content shop. A systems partner.
             </h2>
           </div>
-          <div className="overflow-x-auto rounded-xl">
+          <div className="overflow-x-auto rounded-card border border-border-subtle">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr>
-                  <th className="p-6 border-b border-outline-variant/20 text-xl font-bold text-on-surface-variant w-1/2">
+                  <th className="p-6 border-b border-border-subtle t-h4 text-fg-2 w-1/2">
                     Typical Agency
                   </th>
-                  <th className="p-6 border-b-2 border-primary/40 text-xl font-bold text-on-surface w-1/2 bg-surface-container-high rounded-tr-xl">
+                  <th className="p-6 border-b-2 border-signal-yellow/40 t-h4 text-fg-0 w-1/2 bg-surface-2">
                     AJ Digital
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-base">
+              <tbody className="t-body">
                 {[
                   ["One-off deliverables", "Repeatable, compounding systems"],
                   ["Editing only", "Full authority engine architecture"],
@@ -179,9 +179,9 @@ export default function HomePage() {
                   ["Just posting content", "Routing content to business outcomes"],
                   ["Disconnected, manual assets", "Integrated, automated distribution"],
                 ].map(([left, right], i) => (
-                  <tr key={i} className="border-b border-outline-variant/10 last:border-0">
-                    <td className="p-6 text-on-surface-variant">{left}</td>
-                    <td className="p-6 text-on-surface font-semibold bg-surface-container-high/40 last:rounded-br-xl">
+                  <tr key={i} className="border-b border-border-subtle last:border-0">
+                    <td className="p-6 text-fg-2">{left}</td>
+                    <td className="p-6 text-fg-0 font-semibold bg-surface-2/40">
                       {right}
                     </td>
                   </tr>
@@ -199,55 +199,52 @@ export default function HomePage() {
       <Locations />
 
       {/* ── 10. FEATURED CASE STUDY ─────────────────────────────────────── */}
-      <section className="py-32 bg-surface-container-low">
+      <section className="py-32 bg-bg-1">
         <Container>
-          <div className="overflow-hidden rounded-xl bg-surface-container-high">
+          <div className="overflow-hidden rounded-card border border-border-subtle bg-surface-1">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-3/5 p-10 md:p-16 flex flex-col justify-center">
-                <span className="text-xs font-bold tracking-[0.16em] uppercase text-primary mb-6 block">
+                <span className="t-label mb-6 block">
                   Featured Case Study
                 </span>
-                <h3 className="text-3xl md:text-4xl font-black text-on-surface mb-6 leading-tight">
+                <h3 className="t-h3 mb-6">
                   How a Business Turned One Podcast Into 30+ Monthly Content
                   Assets
                 </h3>
-                <p className="text-on-surface-variant mb-4 text-lg">
-                  <strong className="text-on-surface">The Problem:</strong> No
+                <p className="t-body-lg text-fg-2 mb-4">
+                  <strong className="text-fg-0">The Problem:</strong> No
                   system, inconsistent posting, and massive time bottlenecks
                   causing burnout.
                 </p>
-                <p className="text-on-surface-variant mb-10 text-lg">
-                  <strong className="text-on-surface">The Result:</strong>{" "}
+                <p className="t-body-lg text-fg-2 mb-10">
+                  <strong className="text-fg-0">The Result:</strong>{" "}
                   End-to-end production systems yielded high-velocity outbound
                   content, skyrocketing authority.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/case-studies/podcast-authority-system"
-                    className="inline-flex items-center px-6 py-3 rounded-lg font-bold text-on-primary transition-transform hover:scale-[1.02]"
-                    style={{
-                      background: "linear-gradient(135deg, #2b7ef8, #6aa5fb)",
-                    }}
+                    className="aj-btn-signal"
                   >
                     Read Case Study
                   </Link>
                   <Link
                     href="/case-studies"
-                    className="inline-flex items-center px-6 py-3 border border-outline-variant/20 hover:bg-surface-container text-on-surface font-bold rounded-lg transition-all"
+                    className="aj-btn-intel"
                   >
                     View All Work
                   </Link>
                 </div>
               </div>
-              <div className="lg:w-2/5 bg-surface-container min-h-[280px] flex items-center justify-center p-12">
+              <div className="lg:w-2/5 bg-surface-2 min-h-[280px] flex items-center justify-center p-12">
                 <div className="text-center">
-                  <div className="text-7xl font-black text-secondary mb-4">
+                  <div className="font-mono text-7xl font-medium text-signal-yellow mb-4">
                     30+
                   </div>
-                  <p className="text-on-surface font-bold uppercase tracking-wider text-xl mb-2">
+                  <p className="t-label text-fg-0 text-xl mb-2">
                     Assets / Month
                   </p>
-                  <p className="text-on-surface-variant font-semibold text-sm">
+                  <p className="t-mono text-fg-2">
                     From 1 Recording Session
                   </p>
                 </div>
@@ -258,24 +255,24 @@ export default function HomePage() {
       </section>
 
       {/* ── 11. SOUTH FLORIDA LOCAL SEO ─────────────────────────────────── */}
-      <section className="py-32 bg-surface-container">
+      <section className="py-32 bg-bg-0">
         <Container>
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl font-black text-on-surface mb-6">
+              <h2 className="t-h2 mb-6">
                 Serving Miami and South Florida
               </h2>
-              <p className="text-on-surface-variant text-lg mb-6 leading-relaxed">
+              <p className="t-body-lg text-fg-2 mb-6">
                 We provide localized studio implementation and on-site strategy
                 across Miami-Dade, Broward, and Palm Beach—paired with seamless
                 remote delivery options nationwide.
               </p>
-              <p className="text-on-surface-variant text-base mb-10">
+              <p className="t-body text-fg-2 mb-10">
                 Build your authority right in your own backyard.
               </p>
               <Link
                 href="/apply"
-                className="text-secondary font-bold text-base hover:opacity-80 transition-opacity flex items-center gap-2"
+                className="text-fg-1 font-bold hover:text-signal-yellow transition-colors flex items-center gap-2"
               >
                 Discuss local options →
               </Link>
@@ -295,12 +292,12 @@ export default function HomePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="bg-surface-container-high hover:bg-surface-container-highest p-6 rounded-xl flex justify-between items-center group transition-all"
+                  className="bg-surface-1 border border-border-subtle hover:border-border-strong p-6 rounded-card flex justify-between items-center group transition-all"
                 >
-                  <span className="font-bold text-base text-on-surface">
+                  <span className="t-body font-bold text-fg-0">
                     {item.label}
                   </span>
-                  <span className="text-secondary group-hover:translate-x-1 transition-transform">
+                  <span className="text-signal-yellow group-hover:translate-x-1 transition-transform">
                     →
                   </span>
                 </Link>
@@ -311,7 +308,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 12. PROCESS INLINE CTA ──────────────────────────────────────── */}
-      <section className="py-24 bg-surface-container-low">
+      <section className="py-24 bg-bg-1">
         <Container>
           <InlineApplyCta
             eyebrow="Implementation"
@@ -325,21 +322,21 @@ export default function HomePage() {
       </section>
 
       {/* ── 13. INSIGHTS / BLOG ─────────────────────────────────────────── */}
-      <section className="py-32 bg-surface-container">
+      <section className="py-32 bg-bg-0">
         <Container>
           <div className="flex flex-col sm:flex-row justify-between items-end mb-16 gap-4">
             <div>
-              <h2 className="text-4xl font-black text-on-surface mb-4">
+              <h2 className="t-h2 mb-4">
                 Resources for building authority
               </h2>
-              <p className="text-on-surface-variant text-lg">
+              <p className="t-body-lg text-fg-2">
                 Detailed guides and operational blueprints from our internal
                 playbook.
               </p>
             </div>
             <Link
               href="/blog"
-              className="hidden sm:inline-flex text-secondary font-bold hover:opacity-80 transition-opacity whitespace-nowrap"
+              className="hidden sm:inline-flex text-fg-1 font-bold hover:text-signal-yellow transition-colors whitespace-nowrap"
             >
               View All Articles →
             </Link>
@@ -365,17 +362,17 @@ export default function HomePage() {
             ].map((article) => (
               <div
                 key={article.link}
-                className="bg-surface-container-high rounded-xl p-8 flex flex-col h-full"
+                className="aj-card flex flex-col h-full"
               >
-                <h3 className="text-xl font-bold text-on-surface mb-4 line-clamp-2">
+                <h3 className="t-h4 mb-4 line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-on-surface-variant mb-8 flex-grow leading-relaxed line-clamp-3">
+                <p className="t-body text-fg-2 mb-8 flex-grow line-clamp-3">
                   {article.desc}
                 </p>
                 <Link
                   href={article.link}
-                  className="text-secondary font-bold inline-flex items-center gap-1 group hover:gap-2 transition-all"
+                  className="text-fg-1 font-bold inline-flex items-center gap-1 group hover:text-signal-yellow hover:gap-2 transition-all"
                 >
                   Read Article{" "}
                   <span className="group-hover:translate-x-0.5 transition-transform">
@@ -389,9 +386,9 @@ export default function HomePage() {
       </section>
 
       {/* ── 14. FAQ ─────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-surface-container-low">
+      <section className="py-32 bg-bg-1">
         <Container>
-          <h2 className="text-4xl font-black text-on-surface text-center mb-16">
+          <h2 className="t-h2 text-center mb-16">
             Frequently Asked Questions
           </h2>
           <div className="max-w-4xl mx-auto space-y-8">
@@ -423,12 +420,12 @@ export default function HomePage() {
             ].map((faq, i) => (
               <div
                 key={i}
-                className="border-b border-outline-variant/20 pb-8 last:border-0 last:pb-0"
+                className="border-b border-border-subtle pb-8 last:border-0 last:pb-0"
               >
-                <h3 className="text-xl font-bold text-on-surface mb-3">
+                <h3 className="t-h4 mb-3">
                   {faq.q}
                 </h3>
-                <p className="text-on-surface-variant leading-relaxed">
+                <p className="t-body text-fg-2">
                   {faq.a}
                 </p>
               </div>

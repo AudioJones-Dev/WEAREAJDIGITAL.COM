@@ -31,7 +31,7 @@ export default function MobileNav() {
     <>
       <button
         onClick={toggleNav}
-        className="p-2 text-white hover:text-blue-400 focus-visible:outline-none focus:ring-2 focus:ring-blue-500 rounded-md transition-colors"
+        className="flex min-h-[44px] min-w-[44px] items-center justify-center p-2 text-fg-0 hover:text-signal-yellow focus-visible:outline-none focus:ring-2 focus:ring-accent-blue rounded-md transition-colors"
         aria-label="Toggle Menu"
         aria-expanded={isOpen}
       >
@@ -46,20 +46,20 @@ export default function MobileNav() {
 
       {/* Slide-over Drawer */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-neutral-950 top-[80px] h-[calc(100vh-80px)] overflow-hidden">
+        <div className="fixed inset-0 z-50 flex flex-col bg-bg-base top-[80px] h-[calc(100vh-80px)] overflow-hidden">
           <div className="flex-1 overflow-y-auto px-6 py-8">
             <nav className="flex flex-col gap-6">
               {mainNavConfig.map((item) => (
-                <div key={item.title} className="border-b border-neutral-900 pb-4">
+                <div key={item.title} className="border-b border-border-subtle pb-4">
                   {item.items && item.items.length > 0 ? (
                     <div>
                       <button
                         onClick={() => toggleSection(item.title)}
-                        className="flex items-center justify-between w-full text-left font-bold text-xl text-white py-2 focus-visible:outline-none"
+                        className="flex min-h-[44px] items-center justify-between w-full text-left font-bold text-xl text-fg-0 py-2 focus-visible:outline-none"
                       >
                         {item.title}
                         <svg
-                          className={`w-6 h-6 text-neutral-500 transition-transform ${
+                          className={`w-6 h-6 text-text-muted transition-transform ${
                             expandedSection === item.title ? "rotate-180" : ""
                           }`}
                           fill="none"
@@ -77,11 +77,11 @@ export default function MobileNav() {
                               key={subItem.title}
                               href={subItem.href || "#"}
                               onClick={closeNav}
-                              className="block py-2 text-neutral-300 font-semibold hover:text-white transition-colors"
+                              className="block py-2 text-text-primary font-semibold hover:text-signal-yellow transition-colors"
                             >
                               <div className="text-base">{subItem.title}</div>
                               {subItem.description && (
-                                <p className="text-sm text-neutral-500 mt-1">{subItem.description}</p>
+                                <p className="text-sm text-text-muted mt-1">{subItem.description}</p>
                               )}
                             </Link>
                           ))}
@@ -92,7 +92,7 @@ export default function MobileNav() {
                     <Link
                       href={item.href || "#"}
                       onClick={closeNav}
-                      className="block font-bold text-xl text-white py-2 hover:text-blue-400 transition-colors"
+                      className="block font-bold text-xl text-fg-0 py-2 hover:text-signal-yellow transition-colors"
                     >
                       {item.title}
                     </Link>
@@ -102,13 +102,13 @@ export default function MobileNav() {
             </nav>
           </div>
 
-          <div className="p-6 border-t border-neutral-900 bg-black sticky bottom-0">
+          <div className="p-6 border-t border-border-subtle bg-bg-base sticky bottom-0">
             <Link
               href="/apply"
               onClick={closeNav}
               data-track="mobile-nav-apply-cta"
               data-ga-event="apply_strategy_session_click"
-              className="flex w-full justify-center items-center py-4 text-lg font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-500 transition-colors shadow-lg active:scale-[0.98]"
+              className="aj-btn-signal w-full"
             >
               Apply for a Strategy Session
             </Link>

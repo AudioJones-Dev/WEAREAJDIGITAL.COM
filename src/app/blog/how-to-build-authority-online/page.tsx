@@ -76,24 +76,24 @@ export default function HowToBuildAuthorityOnlinePage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-0">
       <JsonLd data={jsonLd} />
       <main className="mx-auto max-w-4xl px-4 py-16 md:px-8">
-        <header className="mb-12 border-b border-neutral-800 pb-10">
-          <p className="text-sm text-neutral-400">
+        <header className="mb-12 border-b border-border-subtle pb-10">
+          <p className="t-mono text-fg-3">
             Published: April 2026 | Updated: April 2026 | By: Audio Jones | Reading Time: 9 min
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="t-h1 mt-4">
             How to Build Authority Online in 2026 (Without Chasing Trends)
           </h1>
-          <p className="mt-6 text-xl leading-8 text-neutral-300">
+          <p className="t-lead mt-6 text-fg-1">
             Authority online is built through consistency, positioning, and systems, not viral moments. The goal is to become a trusted voice in your niche and turn that trust into a real business asset.
           </p>
         </header>
 
         <article className="prose prose-invert max-w-none">
-          <div className="mb-10 rounded-r-2xl border-l-4 border-blue-500 bg-neutral-950 p-5">
-            <p className="m-0 font-medium text-blue-400">Continue the authority-building cluster:</p>
+          <div className="aj-callout is-blue mb-10">
+            <p className="t-label m-0">Continue the authority-building cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/personal-brand-strategy-for-entrepreneurs">Personal brand strategy for entrepreneurs {"->"}</Link>
               <Link href="/blog/content-repurposing-system">Content repurposing system {"->"}</Link>
@@ -153,18 +153,18 @@ export default function HowToBuildAuthorityOnlinePage() {
           <div className="space-y-6">
             {faqs.map((faq) => (
               <div key={faq.question}>
-                <h3 className="text-xl font-bold">{faq.question}</h3>
-                <p className="m-0 text-neutral-300">{faq.answer}</p>
+                <h3 className="t-h4">{faq.question}</h3>
+                <p className="t-body m-0 text-fg-1">{faq.answer}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 rounded-3xl border border-blue-500/20 bg-neutral-950 p-8 text-center">
-            <h2 className="mt-0 text-3xl font-bold">Ready to build real authority instead of posting randomly?</h2>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-300">
+          <div className="aj-card mt-16 p-8 text-center">
+            <h2 className="t-h2 mt-0">Ready to build real authority instead of posting randomly?</h2>
+            <p className="t-lead mx-auto max-w-2xl text-fg-1">
               Build the message, workflow, and distribution system that compounds over time.
             </p>
-            <Link href="/apply" className="mt-4 inline-flex rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500">
+            <Link href="/apply" className="aj-btn-signal mt-4">
               Apply for a Strategy Session
             </Link>
           </div>

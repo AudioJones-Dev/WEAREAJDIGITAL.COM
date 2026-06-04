@@ -30,17 +30,17 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-bg-0 text-fg-1">
       <section className="px-6 py-28 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <span className="mb-5 inline-block text-sm font-semibold uppercase tracking-[0.18em] text-blue-400">
+            <span className="t-label mb-5 inline-block">
               Services
             </span>
-            <h1 className="mb-6 text-5xl font-black tracking-tight text-white">
+            <h1 className="t-h1 mb-6">
               Systems built for production, distribution, and growth.
             </h1>
-            <p className="text-lg leading-relaxed text-neutral-300">
+            <p className="t-lead text-fg-2">
               We do not sell disconnected deliverables. We build the production,
               AI, and content systems that make your expertise easier to publish,
               repurpose, and turn into pipeline.
@@ -51,17 +51,17 @@ export default function ServicesPage() {
             {services.map((service) => (
               <article
                 key={service.href}
-                className="rounded-2xl border border-neutral-800 bg-neutral-950 p-8"
+                className="aj-card"
               >
-                <h2 className="mb-4 text-2xl font-bold text-white">
+                <h2 className="t-h4 mb-4">
                   {service.title}
                 </h2>
-                <p className="mb-8 leading-relaxed text-neutral-400">
+                <p className="t-body mb-8 text-fg-2">
                   {service.description}
                 </p>
                 <Link
                   href={service.href}
-                  className="inline-flex items-center font-semibold text-blue-400 transition-colors hover:text-blue-300"
+                  className="inline-flex items-center font-semibold text-fg-1 transition-colors hover:text-signal-yellow"
                 >
                   Explore service →
                 </Link>
