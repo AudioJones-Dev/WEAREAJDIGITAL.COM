@@ -33,22 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Applied Intellisystems pages
-  const appliedIntelligencePages: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE_URL}/applied-intelligence`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/applied-intelligence/diagnostic`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
-
   // Service pages
   const servicePages: MetadataRoute.Sitemap = [
     {
@@ -156,7 +140,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...corePages,
-    ...appliedIntelligencePages,
     ...servicePages,
     ...localPages,
     ...caseStudyPages,
