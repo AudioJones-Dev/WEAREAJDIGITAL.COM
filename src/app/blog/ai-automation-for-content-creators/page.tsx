@@ -96,7 +96,7 @@ export default function AIAutomationForContentCreatorsPage() {
             <p className="t-label m-0">Continue the AI consulting cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/ai-tools-for-entrepreneurs">AI tools for entrepreneurs {"->"}</Link>
-              <Link href="/blog/chatgpt-for-business-owners">ChatGPT for business owners {"->"}</Link>
+              <Link href="/blog/ai-content-automation-guide">The complete guide to AI content automation {"->"}</Link>
               <Link href="/blog/content-repurposing-system">Content repurposing system {"->"}</Link>
               <Link href="/services/ai-consulting">AI consulting service {"->"}</Link>
               <Link href="/apply">Apply for a strategy session {"->"}</Link>
@@ -118,7 +118,7 @@ export default function AIAutomationForContentCreatorsPage() {
             ))}
           </ul>
           <p>
-            That is why this topic overlaps with <Link href="/blog/ai-tools-for-entrepreneurs">AI tools for entrepreneurs</Link>, <Link href="/blog/chatgpt-for-business-owners">ChatGPT for business owners</Link>, and the workflow design behind a <Link href="/blog/content-repurposing-system">content repurposing system</Link>.
+            That is why this topic overlaps with <Link href="/blog/ai-tools-for-entrepreneurs">AI tools for entrepreneurs</Link>, the <Link href="/blog/ai-content-automation-guide">complete guide to AI content automation</Link>, and the workflow design behind a <Link href="/blog/content-repurposing-system">content repurposing system</Link>.
           </p>
 
           <h2>The AJ Digital Content Automation Stack</h2>

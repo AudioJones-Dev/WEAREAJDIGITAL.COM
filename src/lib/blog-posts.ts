@@ -45,9 +45,9 @@ export const blogCategories: BlogCategory[] = [
   },
   {
     slug: "ai-consulting",
-    label: "AI Consulting",
+    label: "AI Content & Marketing",
     description:
-      "Practical AI systems for entrepreneurs, workflow automation, content leverage, and implementation support.",
+      "AI-powered content automation, repurposing, and distribution systems that turn a podcast into compounding authority and growth.",
     serviceHref: "/services/ai-consulting",
     pillarSlug: "ai-content-automation-guide",
     localHref: "/ai-consulting-miami",
@@ -160,26 +160,6 @@ export const blogPosts: BlogPostSummary[] = [
       "A lean AI stack for entrepreneurs focused on research, content, automation, and workflow clarity.",
     category: "ai-consulting",
     readTime: "9 min read",
-    pillar: false,
-    normalizedFromDraft: true,
-  },
-  {
-    slug: "chatgpt-for-business-owners",
-    title: "ChatGPT for Business Owners",
-    description:
-      "Practical ChatGPT use cases that help operators save time, support content workflows, and improve execution quality.",
-    category: "ai-consulting",
-    readTime: "8 min read",
-    pillar: false,
-    normalizedFromDraft: true,
-  },
-  {
-    slug: "ai-consulting-for-small-business",
-    title: "AI Consulting for Small Business: What It Is and When You Actually Need It",
-    description:
-      "Learn when small businesses need AI consulting, what problems it solves, and how the right system reduces manual work.",
-    category: "ai-consulting",
-    readTime: "8 min read",
     pillar: false,
     normalizedFromDraft: true,
   },

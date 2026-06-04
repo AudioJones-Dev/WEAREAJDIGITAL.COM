@@ -9,9 +9,9 @@ const services = [
     href: "/services/podcast-production",
   },
   {
-    title: "AI Consulting",
+    title: "Marketing Operations",
     description:
-      "Practical AI workflow design that removes manual bottlenecks and gives your team usable execution leverage.",
+      "An AI-powered content engine that turns your podcast into repurposed assets, distribution, and authority that drives growth.",
     href: "/services/ai-consulting",
   },
   {
@@ -25,7 +25,7 @@ const services = [
 export const metadata: Metadata = {
   title: "Services | AJ Digital",
   description:
-    "Explore AJ Digital services across podcast production, AI consulting, and content systems.",
+    "Explore AJ Digital services across podcast production, marketing operations, and content systems.",
 };
 
 export default function ServicesPage() {
@@ -42,8 +42,8 @@ export default function ServicesPage() {
             </h1>
             <p className="t-lead text-fg-2">
               We do not sell disconnected deliverables. We build the production,
-              AI, and content systems that make your expertise easier to publish,
-              repurpose, and turn into pipeline.
+              marketing, and content systems that make your expertise easier to
+              publish, repurpose, and turn into pipeline.
             </p>
           </div>
 

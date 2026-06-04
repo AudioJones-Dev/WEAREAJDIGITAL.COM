@@ -113,11 +113,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogSlugs = [
     "ai-automation-for-content-creators",
     "ai-automation-podcast-production",
-    "ai-consulting-for-small-business",
     "ai-content-automation-guide",
     "ai-tools-for-content-creation",
     "ai-tools-for-entrepreneurs",
-    "chatgpt-for-business-owners",
     "content-repurposing-guide",
     "content-repurposing-system",
     "how-to-build-authority-online",

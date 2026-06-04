@@ -110,8 +110,7 @@ export default function AIToolsForEntrepreneursPage() {
             <p className="t-label m-0">Continue the AI consulting cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/ai-content-automation-guide">AI content automation guide {"->"}</Link>
-              <Link href="/blog/chatgpt-for-business-owners">ChatGPT for business owners {"->"}</Link>
-              <Link href="/blog/ai-consulting-for-small-business">AI consulting for small business {"->"}</Link>
+              <Link href="/blog/ai-automation-podcast-production">How to automate podcast production with AI {"->"}</Link>
               <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators {"->"}</Link>
               <Link href="/services/ai-consulting">AI consulting service {"->"}</Link>
               <Link href="/services/content-systems">Content systems service {"->"}</Link>
@@ -200,7 +199,7 @@ export default function AIToolsForEntrepreneursPage() {
             Workflow automation tools help entrepreneurs move information automatically between forms, docs, content systems, email tools, CRMs, and publishing workflows. When people say AI is saving them time, part of that is the model itself. A big part is the workflow around it.
           </p>
           <p>
-            That is usually the point where the stack stops being a list of apps and starts becoming an operating system. If you are trying to connect tool selection to implementation, it helps to compare <Link href="/blog/ai-consulting-for-small-business">AI consulting for small business</Link> with the execution logic in <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators</Link>.
+            That is usually the point where the stack stops being a list of apps and starts becoming an operating system. If you are trying to connect tool selection to implementation, it helps to compare our <Link href="/services/ai-consulting">marketing operations service</Link> with the execution logic in <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators</Link>.
           </p>
 
           <h2>Frequently Asked Questions</h2>

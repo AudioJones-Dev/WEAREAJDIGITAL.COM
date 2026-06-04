@@ -44,7 +44,7 @@ export default function SiteFooter() {
                   href="/services/ai-consulting/"
                   className="transition-colors hover:text-signal-yellow"
                 >
-                  AI Consulting
+                  Marketing Operations
                 </Link>
               </li>
               <li>
@@ -120,7 +120,7 @@ export default function SiteFooter() {
                   href="/ai-consulting-miami"
                   className="transition-colors hover:text-signal-yellow"
                 >
-                  AI Consulting Miami
+                  Marketing Operations Miami
                 </Link>
               </li>
               <li>

@@ -135,8 +135,8 @@ export default function AIContentAutomationGuidePage() {
               <Link href="/blog/ai-tools-for-entrepreneurs/">
                 Review the AI tools for content creation
               </Link>
-              <Link href="/blog/ai-consulting-for-small-business/">
-                Read AI consulting for small business
+              <Link href="/blog/ai-automation-for-content-creators/">
+                Read AI automation for content creators
               </Link>
               <Link href="/case-studies/podcast-authority-system/">
                 See the podcast authority system case study
@@ -369,11 +369,7 @@ export default function AIContentAutomationGuidePage() {
           <p>
             That is why this guide connects naturally to <Link href="/ai-consulting-miami">AI consulting Miami</Link>,
             <Link href="/content-systems-miami"> content systems Miami</Link>, and practical{" "}
-            <Link href="/services/ai-consulting/">AI consulting services</Link>. It also overlaps with{" "}
-            <Link href="/blog/ai-consulting-for-small-business/">
-              AI consulting for small business
-            </Link>{" "}
-            and proof assets like the{" "}
+            <Link href="/services/ai-consulting/">AI consulting services</Link>. It also overlaps with proof assets like the{" "}
             <Link href="/case-studies/podcast-authority-system/">
               podcast authority system case study
             </Link>

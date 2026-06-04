@@ -405,9 +405,9 @@ export default function AIAutomationPodcastProductionPage() {
             <Link href="/blog/content-repurposing-guide/">
               content repurposing guide
             </Link>
-            . For the small-business workflow angle, read{" "}
-            <Link href="/blog/ai-consulting-for-small-business/">
-              AI consulting for small business
+            . For the operational workflow angle, explore our{" "}
+            <Link href="/services/ai-consulting">
+              marketing operations service
             </Link>
             . For proof of how this works commercially, review the{" "}
             <Link href="/case-studies/podcast-authority-system/">
