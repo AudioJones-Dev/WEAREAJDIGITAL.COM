@@ -44,7 +44,7 @@
   --border-strong:   #2A2A2A;   /* dividers */
   --border-subtle:   #1E1E1E;   /* subtle borders */
   --text-primary:    #E8E8E8;   /* body copy */
-  --text-muted:      #666666;   /* labels, secondary */
+  --text-muted:      #808080;   /* labels, secondary — bumped from #666 for WCAG AA (>=4.5:1) on dark surfaces */
 
   --accent-blue:     #4DACFF;   /* data · links */
   --accent-red:      #FF4545;   /* critical · P0 */
