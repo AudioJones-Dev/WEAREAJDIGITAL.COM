@@ -107,12 +107,12 @@ export default function AIToolsForEntrepreneursPage() {
 
         <article className="prose prose-invert max-w-none">
           <div className="aj-callout is-blue mb-10">
-            <p className="t-label m-0">Continue the AI consulting cluster:</p>
+            <p className="t-label m-0">Continue the Marketing Operations cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/ai-content-automation-guide">AI content automation guide {"->"}</Link>
               <Link href="/blog/ai-automation-podcast-production">How to automate podcast production with AI {"->"}</Link>
               <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators {"->"}</Link>
-              <Link href="/services/ai-consulting">AI consulting service {"->"}</Link>
+              <Link href="/services/ai-consulting">Marketing Operations {"->"}</Link>
               <Link href="/services/content-systems">Content systems service {"->"}</Link>
               <Link href="/apply">Apply for a strategy session {"->"}</Link>
             </div>
@@ -182,7 +182,7 @@ export default function AIToolsForEntrepreneursPage() {
             headline="If you want the right AI stack implemented instead of guessed, apply for a strategy session."
             copy="We help entrepreneurs choose fewer tools, wire them into real workflows, and turn AI into practical leverage."
             secondaryHref="/services/ai-consulting"
-            secondaryLabel="Explore AI consulting"
+            secondaryLabel="Explore Marketing Operations"
             trackingId="ai-tools-for-entrepreneurs-inline-cta"
           />
 

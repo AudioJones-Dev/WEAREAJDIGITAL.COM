@@ -93,12 +93,12 @@ export default function AIAutomationForContentCreatorsPage() {
 
         <article className="prose prose-invert max-w-none">
           <div className="aj-callout is-blue mb-10">
-            <p className="t-label m-0">Continue the AI consulting cluster:</p>
+            <p className="t-label m-0">Continue the Marketing Operations cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/ai-tools-for-entrepreneurs">AI tools for entrepreneurs {"->"}</Link>
               <Link href="/blog/ai-content-automation-guide">The complete guide to AI content automation {"->"}</Link>
               <Link href="/blog/content-repurposing-system">Content repurposing system {"->"}</Link>
-              <Link href="/services/ai-consulting">AI consulting service {"->"}</Link>
+              <Link href="/services/ai-consulting">Marketing Operations {"->"}</Link>
               <Link href="/apply">Apply for a strategy session {"->"}</Link>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function AIAutomationForContentCreatorsPage() {
             headline="If you want content automation that actually reduces workload, apply for a strategy session."
             copy="We help operators build creator workflows that automate repurposing and distribution without sacrificing clarity."
             secondaryHref="/services/ai-consulting"
-            secondaryLabel="Explore AI consulting"
+            secondaryLabel="Explore Marketing Operations"
             trackingId="ai-automation-content-creators-inline-cta"
           />
 

@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how AJ Digital builds podcast production, AI consulting, and content systems for serious operators.",
+    "Learn how AJ Digital builds podcast production, Marketing Operations, and content systems for serious operators.",
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
         url: `${siteUrl}/about`,
         name: "About AJ Digital",
         description:
-          "AJ Digital builds authority systems through podcast production, AI consulting, and content operations.",
+          "AJ Digital builds authority systems through podcast production, Marketing Operations, and content systems.",
       },
       buildOrganizationJsonLd(),
       buildBreadcrumbJsonLd([
@@ -48,7 +48,7 @@ export default function AboutPage() {
         "Build a flagship show that becomes the source asset for your authority engine.",
     },
     {
-      title: "AI Consulting",
+      title: "Marketing Operations",
       href: "/services/ai-consulting",
       description:
         "Install practical workflows that reclaim time and improve operational throughput.",
@@ -153,7 +153,7 @@ export default function AboutPage() {
           </h2>
           <p className="t-body-lg mx-auto mt-4 max-w-2xl text-fg-2">
             Start with a strategy session. We will map the highest-leverage
-            path across podcast production, AI consulting, or content systems.
+            path across podcast production, Marketing Operations, or content systems.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:items-center">
             <Link href="/apply" className="aj-btn-signal">

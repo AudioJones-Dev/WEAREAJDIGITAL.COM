@@ -33,7 +33,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.weareajdigital.com"),
   title: {
-    default: "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    default: "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     template: "%s | AJ Digital",
   },
   description:
@@ -57,14 +57,14 @@ export const metadata: Metadata = {
     locale:      "en_US",
     url:         "https://www.weareajdigital.com",
     siteName:    "AJ Digital",
-    title:       "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    title:       "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     description: "AJ Digital builds podcast production systems, AI workflows, and content engines for operators who want authority and measurable growth.",
     images: [
       {
         url:    "/og-default.png",
         width:  1200,
         height: 630,
-        alt:    "AJ Digital — Podcast Production, AI Consulting, Content Systems",
+        alt:    "AJ Digital — Podcast Production, Marketing Operations, Content Systems",
       },
     ],
   },
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   // ── Twitter / X Card ─────────────────────────────────────────────────────
   twitter: {
     card:        "summary_large_image",
-    title:       "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    title:       "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     description: "We build podcast systems, AI workflows, and content engines for operators who want authority and measurable growth.",
     images:      ["/og-default.png"],
   },

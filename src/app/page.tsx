@@ -12,11 +12,11 @@ import HomeCTA from "@/components/home/cta";
 import Container from "@/components/home/container";
 
 export const metadata: Metadata = {
-  title: "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+  title: "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
   description:
     "AJ Digital builds podcast systems, AI workflows, and content engines for entrepreneurs and businesses in Miami and South Florida.",
   openGraph: {
-    title: "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    title: "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     description:
       "AJ Digital builds podcast systems, AI workflows, and content engines for entrepreneurs and businesses in Miami and South Florida.",
     type: "website",
@@ -283,7 +283,7 @@ export default function HomePage() {
                   label: "Podcast Production Miami",
                   href: "/podcast-production-miami",
                 },
-                { label: "AI Consulting Miami", href: "/ai-consulting-miami" },
+                { label: "Marketing Operations Miami", href: "/ai-consulting-miami" },
                 {
                   label: "Content Systems Miami",
                   href: "/content-systems-miami",

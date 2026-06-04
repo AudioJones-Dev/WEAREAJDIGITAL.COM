@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Browse AJ Digital guides on podcast production, AI consulting, content systems, and authority-building workflows.",
+    "Browse AJ Digital guides on podcast production, Marketing Operations, content systems, and authority-building workflows.",
 };
 
 export default function BlogIndexPage() {
@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
         url: `${siteUrl}/blog`,
         name: "AJ Digital Blog",
         description:
-          "A collection of AJ Digital articles covering podcast production, AI consulting, and content systems.",
+          "A collection of AJ Digital articles covering podcast production, Marketing Operations, and content systems.",
       },
       buildOrganizationJsonLd(),
       buildBreadcrumbJsonLd([
@@ -174,7 +174,7 @@ export default function BlogIndexPage() {
                 href="/services/ai-consulting"
                 className="t-body flex min-h-[44px] items-center rounded-2xl border border-border-subtle bg-bg-0 p-5 text-fg-1 transition-colors hover:border-accent-blue"
               >
-                Explore AI consulting services
+                Explore Marketing Operations
               </Link>
               <Link
                 href="/services/content-systems"

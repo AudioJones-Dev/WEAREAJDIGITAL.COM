@@ -476,8 +476,8 @@ export default function ApplyForm() {
                       desc: "Repurposing workflows that turn one recording into multiple assets.",
                     },
                     {
-                      id: "AI Consulting",
-                      desc: "Practical AI workflow design and implementation.",
+                      id: "Marketing Operations",
+                      desc: "AI-powered content, repurposing, and distribution systems.",
                     },
                     {
                       id: "Full Authority Engine",

@@ -481,7 +481,7 @@ export default function ContentRepurposingGuidePage() {
           </p>
           <p>
             This is where practical{" "}
-            <Link href="/services/ai-consulting/">AI consulting</Link>{" "}
+            <Link href="/services/ai-consulting/">Marketing Operations</Link>{" "}
             becomes useful. AI should support the workflow, speed up repetitive
             tasks, and make repurposing easier for both solo operators and
             teams.

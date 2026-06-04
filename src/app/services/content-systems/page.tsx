@@ -37,7 +37,7 @@ export default function ContentSystemsServicePage() {
         url: "https://weareajdigital.com",
         logo: "https://weareajdigital.com/logo.png",
         description:
-          "Podcast Production, AI Consulting, and Content Systems Agency based in Miami.",
+          "Podcast Production, Marketing Operations, and Content Systems Agency based in Miami.",
       },
       {
         "@type": "FAQPage",
@@ -240,7 +240,7 @@ export default function ContentSystemsServicePage() {
               <Link href="/blog/how-to-start-a-podcast-for-business" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Launch path: start a podcast for your business</Link>
               <Link href="/blog/how-to-build-authority-online" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Authority: how to build authority online</Link>
               <Link href="/services/podcast-production" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Execution: podcast production service</Link>
-              <Link href="/services/ai-consulting" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Execution: AI consulting strategy</Link>
+              <Link href="/services/ai-consulting" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Execution: Marketing Operations</Link>
               <Link href="/content-systems-miami" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Local page: content systems Miami</Link>
               <Link href="/case-studies/podcast-authority-system" className="text-fg-1 hover:text-signal-yellow transition-colors underline underline-offset-4 text-sm font-medium">Proof: podcast authority system case study</Link>
             </div>

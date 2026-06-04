@@ -5,7 +5,7 @@ import ApplyForm from "./ApplyForm";
 export const metadata: Metadata = {
   title: "Apply to Work With AJ Digital",
   description:
-    "Apply to work with AJ Digital for podcast production, AI consulting, and content systems. Built for serious operators and growth-focused brands.",
+    "Apply to work with AJ Digital for podcast production, Marketing Operations, and content systems. Built for serious operators and growth-focused brands.",
 };
 
 export default function ApplyPage() {

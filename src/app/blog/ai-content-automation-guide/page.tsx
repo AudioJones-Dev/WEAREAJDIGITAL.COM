@@ -129,9 +129,9 @@ export default function AIContentAutomationGuidePage() {
           <div className="aj-callout is-blue mb-10">
             <p className="t-label m-0">Build the workflow behind the tools:</p>
             <div className="mt-3 flex flex-col gap-2">
-              <Link href="/services/ai-consulting/">Explore AI consulting</Link>
+              <Link href="/services/ai-consulting/">Explore Marketing Operations</Link>
               <Link href="/services/content-systems/">See how AJ Digital builds content systems</Link>
-              <Link href="/ai-consulting-miami">Learn about AI consulting in Miami</Link>
+              <Link href="/ai-consulting-miami">Learn about Marketing Operations in Miami</Link>
               <Link href="/blog/ai-tools-for-entrepreneurs/">
                 Review the AI tools for content creation
               </Link>
@@ -324,7 +324,7 @@ export default function AIContentAutomationGuidePage() {
             <li>Improve the system based on output and conversion data</li>
           </ul>
           <p>
-            This is where <Link href="/services/ai-consulting/">AI consulting</Link> and{" "}
+            This is where <Link href="/services/ai-consulting/">Marketing Operations</Link> and{" "}
             <Link href="/services/content-systems/">content systems</Link> overlap most clearly. If the
             workflow needs implementation help, it is usually time to{" "}
             <Link href="/apply">apply for a strategy session</Link>.
@@ -367,9 +367,9 @@ export default function AIContentAutomationGuidePage() {
             enterprise complexity.
           </p>
           <p>
-            That is why this guide connects naturally to <Link href="/ai-consulting-miami">AI consulting Miami</Link>,
+            That is why this guide connects naturally to <Link href="/ai-consulting-miami">Marketing Operations in Miami</Link>,
             <Link href="/content-systems-miami"> content systems Miami</Link>, and practical{" "}
-            <Link href="/services/ai-consulting/">AI consulting services</Link>. It also overlaps with proof assets like the{" "}
+            <Link href="/services/ai-consulting/">Marketing Operations</Link>. It also overlaps with proof assets like the{" "}
             <Link href="/case-studies/podcast-authority-system/">
               podcast authority system case study
             </Link>
@@ -393,7 +393,7 @@ export default function AIContentAutomationGuidePage() {
             headline="If you want this AI content workflow implemented, apply for a strategy session."
             copy="We help serious operators move beyond isolated tools and build AI content systems that scale output, consistency, and conversion."
             secondaryHref="/services/ai-consulting/"
-            secondaryLabel="Explore AI consulting"
+            secondaryLabel="Explore Marketing Operations"
             trackingId="ai-content-automation-guide-inline-cta"
           />
 

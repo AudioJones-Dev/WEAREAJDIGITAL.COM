@@ -66,7 +66,7 @@ export default function ContactPage() {
           </h2>
           <p className="t-body-lg mx-auto mt-4 max-w-2xl text-fg-2">
             Review the blog, case studies, and service pages to understand how
-            AJ Digital approaches podcast production, AI consulting, and
+            AJ Digital approaches podcast production, Marketing Operations, and
             content systems.
           </p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">

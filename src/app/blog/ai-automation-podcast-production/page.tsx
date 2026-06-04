@@ -151,7 +151,7 @@ export default function AIAutomationPodcastProductionPage() {
                 Explore podcast production services
               </Link>
               <Link href="/services/ai-consulting/">
-                See how AI consulting supports the workflow
+                See how Marketing Operations supports the workflow
               </Link>
               <Link href="/services/content-systems/">
                 Learn how content systems turn episodes into assets
