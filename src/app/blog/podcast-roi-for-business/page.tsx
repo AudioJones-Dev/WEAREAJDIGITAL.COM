@@ -78,25 +78,25 @@ export default function PodcastRoiForBusinessPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-0">
       <JsonLd data={jsonLd} />
 
       <main className="mx-auto max-w-4xl px-4 py-16 md:px-8">
-        <header className="mb-12 border-b border-neutral-800 pb-10">
-          <p className="text-sm text-neutral-400">
+        <header className="mb-12 border-b border-border-subtle pb-10">
+          <p className="t-mono text-fg-3">
             Published: April 2026 | Updated: April 2026 | By: Audio Jones | Reading Time: 8 min
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="t-h1 mt-4">
             Podcast ROI for Business: How to Measure If Your Show Is Actually Working
           </h1>
-          <p className="mt-6 text-xl leading-8 text-neutral-300">
+          <p className="t-lead mt-6 text-fg-1">
             Podcast ROI is not just downloads. For business owners, the real return comes from authority, trust, and client acquisition.
           </p>
         </header>
 
         <article className="prose prose-invert max-w-none">
-          <div className="mb-10 rounded-r-2xl border-l-4 border-blue-500 bg-neutral-950 p-5">
-            <p className="m-0 font-medium text-blue-400">Continue the measurement cluster:</p>
+          <div className="aj-callout is-blue mb-10">
+            <p className="t-label m-0">Continue the measurement cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/podcast-production-cost">Podcast production cost {"->"}</Link>
               <Link href="/blog/what-does-a-podcast-production-agency-do">What a podcast production agency does {"->"}</Link>
@@ -121,18 +121,18 @@ export default function PodcastRoiForBusinessPage() {
 
           <h2>ROI vs vanity metrics</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full border-collapse border border-neutral-800">
-              <thead className="bg-neutral-900">
+            <table className="min-w-full border-collapse border border-border-subtle">
+              <thead className="bg-bg-3">
                 <tr>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Metric</th>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Type</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Metric</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Type</th>
                 </tr>
               </thead>
               <tbody>
                 {metricRows.map((row) => (
                   <tr key={row[0]}>
                     {row.map((cell) => (
-                      <td key={cell} className="border border-neutral-800 px-4 py-3">{cell}</td>
+                      <td key={cell} className="border border-border-subtle px-4 py-3">{cell}</td>
                     ))}
                   </tr>
                 ))}
@@ -164,18 +164,18 @@ export default function PodcastRoiForBusinessPage() {
           <div className="space-y-6">
             {faqs.map((faq) => (
               <div key={faq.question}>
-                <h3 className="text-xl font-bold">{faq.question}</h3>
-                <p className="m-0 text-neutral-300">{faq.answer}</p>
+                <h3 className="t-h4">{faq.question}</h3>
+                <p className="t-body m-0 text-fg-1">{faq.answer}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 rounded-3xl border border-blue-500/20 bg-neutral-950 p-8 text-center">
-            <h2 className="mt-0 text-3xl font-bold">Want your podcast to generate real business results?</h2>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-300">
+          <div className="aj-card mt-16 p-8 text-center">
+            <h2 className="t-h2 mt-0">Want your podcast to generate real business results?</h2>
+            <p className="t-lead mx-auto max-w-2xl text-fg-1">
               The biggest gains usually come from treating the podcast as infrastructure instead of isolated content.
             </p>
-            <Link href="/apply" className="mt-4 inline-flex rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500">
+            <Link href="/apply" className="aj-btn-signal mt-4">
               Apply for a Strategy Session
             </Link>
           </div>

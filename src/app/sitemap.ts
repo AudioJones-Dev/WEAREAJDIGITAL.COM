@@ -33,22 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Applied Intellisystems pages
-  const appliedIntelligencePages: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE_URL}/applied-intelligence`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/applied-intelligence/diagnostic`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
-
   // Service pages
   const servicePages: MetadataRoute.Sitemap = [
     {
@@ -129,11 +113,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogSlugs = [
     "ai-automation-for-content-creators",
     "ai-automation-podcast-production",
-    "ai-consulting-for-small-business",
     "ai-content-automation-guide",
     "ai-tools-for-content-creation",
     "ai-tools-for-entrepreneurs",
-    "chatgpt-for-business-owners",
     "content-repurposing-guide",
     "content-repurposing-system",
     "how-to-build-authority-online",
@@ -156,7 +138,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...corePages,
-    ...appliedIntelligencePages,
     ...servicePages,
     ...localPages,
     ...caseStudyPages,

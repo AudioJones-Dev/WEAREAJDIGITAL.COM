@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Syne, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import AnalyticsProvider from "@/components/analytics-provider";
 import SiteHeader from "@/components/site-header";
@@ -8,12 +8,32 @@ import StickyApplyCta from "@/components/sticky-apply-cta";
 import HeaderSpacer from "@/components/header-spacer";
 import SiteChrome from "@/components/site-chrome";
 
-const inter = Inter({ subsets: ["latin"] });
+// Brand 2.0 typography (§03) — Syne for display/headers,
+// DM Sans for body, DM Mono for labels/data/badges. CSS variables
+// are wired to the corresponding --font-* tokens in globals.css.
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-syne",
+  display: "swap",
+});
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-dm-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.weareajdigital.com"),
   title: {
-    default: "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    default: "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     template: "%s | AJ Digital",
   },
   description:
@@ -37,14 +57,14 @@ export const metadata: Metadata = {
     locale:      "en_US",
     url:         "https://www.weareajdigital.com",
     siteName:    "AJ Digital",
-    title:       "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    title:       "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     description: "AJ Digital builds podcast production systems, AI workflows, and content engines for operators who want authority and measurable growth.",
     images: [
       {
         url:    "/og-default.png",
         width:  1200,
         height: 630,
-        alt:    "AJ Digital — Podcast Production, AI Consulting, Content Systems",
+        alt:    "AJ Digital — Podcast Production, Marketing Operations, Content Systems",
       },
     ],
   },
@@ -52,7 +72,7 @@ export const metadata: Metadata = {
   // ── Twitter / X Card ─────────────────────────────────────────────────────
   twitter: {
     card:        "summary_large_image",
-    title:       "AJ Digital | Podcast Production, AI Consulting, Content Systems",
+    title:       "AJ Digital | Podcast Production, Marketing Operations, Content Systems",
     description: "We build podcast systems, AI workflows, and content engines for operators who want authority and measurable growth.",
     images:      ["/og-default.png"],
   },
@@ -64,8 +84,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.className} bg-black text-white antialiased`}>
+    <html
+      lang="en"
+      className={`dark scroll-smooth ${syne.variable} ${dmSans.variable} ${dmMono.variable}`}
+    >
+      <body className="bg-black text-white antialiased">
         <AnalyticsProvider />
         <SiteHeader />
         <HeaderSpacer />

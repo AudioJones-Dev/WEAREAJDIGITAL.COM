@@ -89,31 +89,30 @@ export default function AIToolsForEntrepreneursPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-0">
       <JsonLd data={jsonLd} />
 
       <main className="mx-auto max-w-4xl px-4 py-16 md:px-8">
-        <header className="mb-12 border-b border-neutral-800 pb-10">
-          <p className="text-sm text-neutral-400">
+        <header className="mb-12 border-b border-border-subtle pb-10">
+          <p className="t-mono text-fg-3">
             Published: April 2026 | Updated: April 2026 | By: Audio Jones | Reading Time: 9 min
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="t-h1 mt-4">
             AI Tools for Entrepreneurs in 2026: The Stack That Actually Works
           </h1>
-          <p className="mt-6 text-xl leading-8 text-neutral-300">
+          <p className="t-lead mt-6 text-fg-1">
             The best AI tools for entrepreneurs in 2026 are the ones that reduce execution friction, improve decision-making, and speed up content or operational workflows. The wrong way to build an AI stack is to collect random subscriptions. The right way is to choose tools based on the bottleneck you are trying to solve.
           </p>
         </header>
 
         <article className="prose prose-invert max-w-none">
-          <div className="mb-10 rounded-r-2xl border-l-4 border-blue-500 bg-neutral-950 p-5">
-            <p className="m-0 font-medium text-blue-400">Continue the AI consulting cluster:</p>
+          <div className="aj-callout is-blue mb-10">
+            <p className="t-label m-0">Continue the Marketing Operations cluster:</p>
             <div className="mt-3 flex flex-col gap-2">
               <Link href="/blog/ai-content-automation-guide">AI content automation guide {"->"}</Link>
-              <Link href="/blog/chatgpt-for-business-owners">ChatGPT for business owners {"->"}</Link>
-              <Link href="/blog/ai-consulting-for-small-business">AI consulting for small business {"->"}</Link>
+              <Link href="/blog/ai-automation-podcast-production">How to automate podcast production with AI {"->"}</Link>
               <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators {"->"}</Link>
-              <Link href="/services/ai-consulting">AI consulting service {"->"}</Link>
+              <Link href="/services/ai-consulting">Marketing Operations {"->"}</Link>
               <Link href="/services/content-systems">Content systems service {"->"}</Link>
               <Link href="/apply">Apply for a strategy session {"->"}</Link>
             </div>
@@ -132,19 +131,19 @@ export default function AIToolsForEntrepreneursPage() {
             The best AI tools for entrepreneurs usually fall into conversational assistants, research tools, automation tools, creative production tools, and operational organization tools. Choosing one solid option in each category is usually more effective than buying multiple tools that overlap.
           </p>
           <div className="overflow-x-auto">
-            <table className="min-w-full border-collapse border border-neutral-800">
-              <thead className="bg-neutral-900">
+            <table className="min-w-full border-collapse border border-border-subtle">
+              <thead className="bg-bg-3">
                 <tr>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Category</th>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">What it does</th>
-                  <th className="border border-neutral-800 px-4 py-3 text-left">Best for</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Category</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">What it does</th>
+                  <th className="border border-border-subtle px-4 py-3 text-left text-fg-0">Best for</th>
                 </tr>
               </thead>
               <tbody>
                 {stackRows.map((row) => (
                   <tr key={row[0]}>
                     {row.map((cell) => (
-                      <td key={cell} className="border border-neutral-800 px-4 py-3">
+                      <td key={cell} className="border border-border-subtle px-4 py-3">
                         {cell}
                       </td>
                     ))}
@@ -183,7 +182,7 @@ export default function AIToolsForEntrepreneursPage() {
             headline="If you want the right AI stack implemented instead of guessed, apply for a strategy session."
             copy="We help entrepreneurs choose fewer tools, wire them into real workflows, and turn AI into practical leverage."
             secondaryHref="/services/ai-consulting"
-            secondaryLabel="Explore AI consulting"
+            secondaryLabel="Explore Marketing Operations"
             trackingId="ai-tools-for-entrepreneurs-inline-cta"
           />
 
@@ -200,27 +199,27 @@ export default function AIToolsForEntrepreneursPage() {
             Workflow automation tools help entrepreneurs move information automatically between forms, docs, content systems, email tools, CRMs, and publishing workflows. When people say AI is saving them time, part of that is the model itself. A big part is the workflow around it.
           </p>
           <p>
-            That is usually the point where the stack stops being a list of apps and starts becoming an operating system. If you are trying to connect tool selection to implementation, it helps to compare <Link href="/blog/ai-consulting-for-small-business">AI consulting for small business</Link> with the execution logic in <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators</Link>.
+            That is usually the point where the stack stops being a list of apps and starts becoming an operating system. If you are trying to connect tool selection to implementation, it helps to compare our <Link href="/services/ai-consulting">marketing operations service</Link> with the execution logic in <Link href="/blog/ai-automation-for-content-creators">AI automation for content creators</Link>.
           </p>
 
           <h2>Frequently Asked Questions</h2>
           <div className="space-y-6">
             {faqs.map((faq) => (
               <div key={faq.question}>
-                <h3 className="text-xl font-bold">{faq.question}</h3>
-                <p className="m-0 text-neutral-300">{faq.answer}</p>
+                <h3 className="t-h4">{faq.question}</h3>
+                <p className="t-body m-0 text-fg-1">{faq.answer}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 rounded-3xl border border-blue-500/20 bg-neutral-950 p-8 text-center">
-            <h2 className="mt-0 text-3xl font-bold">Ready to build an AI stack that actually supports your business?</h2>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-300">
+          <div className="aj-card mt-16 p-8 text-center">
+            <h2 className="t-h2 mt-0">Ready to build an AI stack that actually supports your business?</h2>
+            <p className="t-lead mx-auto max-w-2xl text-fg-1">
               Keep the stack lean, connect it to workflows, and make AI useful under pressure.
             </p>
             <Link
               href="/apply"
-              className="mt-4 inline-flex rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal mt-4"
             >
               Apply for a Strategy Session
             </Link>

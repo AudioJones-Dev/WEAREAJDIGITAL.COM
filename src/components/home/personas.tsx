@@ -4,13 +4,11 @@ import { personas } from "@/data/home";
 
 export default function Personas() {
   return (
-    <section className="py-32 bg-surface-dim">
+    <section className="py-32 bg-bg-1">
       <Container>
         <div className="mb-16">
-          <h2 className="text-4xl font-black text-on-surface mb-4">
-            Built for Visionaries
-          </h2>
-          <p className="text-on-surface-variant text-lg">
+          <h2 className="t-h2 mb-4">Built for Visionaries</h2>
+          <p className="t-lead text-fg-2">
             We partner with those who have a message worth scaling.
           </p>
         </div>
@@ -19,7 +17,7 @@ export default function Personas() {
           {personas.map((persona) => (
             <article
               key={persona.title}
-              className="group relative h-[450px] overflow-hidden rounded-xl"
+              className="group relative h-[450px] overflow-hidden rounded-card border border-border-subtle"
             >
               <Image
                 src={persona.imageSrc}
@@ -28,15 +26,11 @@ export default function Personas() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
               />
-              {/* Bottom gradient overlay — tonal, no border */}
-              <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-80" />
+              {/* Bottom scrim overlay — tonal, no border */}
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-0 via-bg-0/40 to-transparent opacity-80" />
               <div className="absolute bottom-6 left-6">
-                <h4 className="text-xl font-bold text-on-surface">
-                  {persona.title}
-                </h4>
-                <p className="text-sm text-on-surface-variant">
-                  {persona.subtitle}
-                </p>
+                <h4 className="t-h4 text-fg-0">{persona.title}</h4>
+                <p className="t-small text-fg-2">{persona.subtitle}</p>
               </div>
             </article>
           ))}

@@ -1,5 +1,15 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Audio Jones — Brand Guidelines 2.0 (V2) Tailwind theme.
+ *
+ * This is the Tailwind v3 equivalent of the `@theme inline { ... }` block
+ * that lives in the canonical v4 source (docs/design/globals.reference.css).
+ * Every token NAME below maps to the matching CSS custom property defined in
+ * src/app/globals.css, so utilities like `bg-signal-yellow`, `text-text-muted`,
+ * `border-border-strong`, and the legacy `bg-aj-orange` all resolve to the V2
+ * palette without touching call sites.
+ */
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,85 +19,96 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // ── Legacy tokens (keep for existing pages) ──────────────────────
+        // ── Legacy passthrough (kept) ────────────────────────────────────
         background: "var(--background)",
         foreground: "var(--foreground)",
 
-        // ── AJ Digital "Editorial Authority" design system ───────────────
-        // Material Design-style surface hierarchy (dark cinematic palette)
-        "surface-dim":               "#0b1326",
-        "surface":                   "#0b1326",
-        "surface-container-lowest":  "#060e20",
-        "surface-container-low":     "#131b2e",
-        "surface-container":         "#171f33",
-        "surface-container-high":    "#222a3d",
-        "surface-container-highest": "#2d3449",
-        "surface-bright":            "#31394d",
-        "surface-variant":           "#2d3449",
+        // ── V2 canonical color names (preferred for new code) ────────────
+        "signal-yellow":  "var(--signal-yellow)",
+        "signal-soft":    "var(--signal-soft)",
+        "bg-base":        "var(--bg-base)",
+        "surface-1":      "var(--surface-1)",
+        "surface-2":      "var(--surface-2)",
+        "border-subtle":  "var(--border-subtle)",
+        "border-strong":  "var(--border-strong)",
+        "text-primary":   "var(--text-primary)",
+        "text-muted":     "var(--text-muted)",
+        "accent-blue":    "var(--accent-blue)",
+        "accent-red":     "var(--accent-red)",
+        "accent-amber":   "var(--accent-amber)",
+        "accent-green":   "var(--accent-green)",
 
-        // Primary (periwinkle blue)
-        "primary":           "#adc6ff",
-        "on-primary":        "#002e69",
-        "primary-container": "#4c8eff",
-        "primary-fixed":     "#d8e2ff",
-        "primary-fixed-dim": "#adc6ff",
+        // ── Surface ramp (dark default) ──────────────────────────────────
+        "bg-0": "var(--bg-0)",
+        "bg-1": "var(--bg-1)",
+        "bg-2": "var(--bg-2)",
+        "bg-3": "var(--bg-3)",
+        "bg-4": "var(--bg-4)",
 
-        // Secondary / accent (warm amber-gold)
-        "secondary":           "#ffb95d",
-        "on-secondary":        "#462a00",
-        "secondary-container": "#d48800",
-        "secondary-fixed":     "#ffddb7",
-        "secondary-fixed-dim": "#ffb95d",
+        // ── Light-split tokens ───────────────────────────────────────────
+        "bg-light-0": "var(--bg-light-0)",
+        "bg-light-1": "var(--bg-light-1)",
+        "bg-light-2": "var(--bg-light-2)",
+        "paper":        "var(--paper)",
+        "surface":      "var(--surface)",
+        "surface-soft": "var(--surface-soft)",
+        "ink":          "var(--ink)",
+        "ink-muted":    "var(--ink-muted)",
 
-        // Tertiary
-        "tertiary":           "#a7c8ff",
-        "on-tertiary":        "#003061",
-        "tertiary-container": "#5592e6",
+        // ── Text ramp ────────────────────────────────────────────────────
+        "fg-0": "var(--fg-0)",
+        "fg-1": "var(--fg-1)",
+        "fg-2": "var(--fg-2)",
+        "fg-3": "var(--fg-3)",
+        "fg-light-0": "var(--fg-light-0)",
+        "fg-light-1": "var(--fg-light-1)",
+        "fg-light-2": "var(--fg-light-2)",
 
-        // On-surface text tones
-        "on-surface":         "#dae2fd",
-        "on-surface-variant": "#c1c6d6",
-        "on-background":      "#dae2fd",
+        // ── Semantic aliases ─────────────────────────────────────────────
+        "signal": "var(--signal)",
+        "system": "var(--system)",
+        "metric": "var(--metric)",
 
-        // Borders / outlines
-        "outline":         "#8b90a0",
-        "outline-variant": "#414754",
+        // ── Brand identity aliases ───────────────────────────────────────
+        "orange-primary": "var(--orange-primary)",
+        "blue-system":    "var(--blue-system)",
+        "dark-primary":   "var(--dark-primary)",
+        "dark-secondary": "var(--dark-secondary)",
 
-        // Inverse / misc
-        "inverse-primary":    "#005ac1",
-        "inverse-on-surface": "#283044",
-        "inverse-surface":    "#dae2fd",
-        "surface-tint":       "#adc6ff",
-
-        // Semantic
-        "error":           "#ffb4ab",
-        "error-container": "#93000a",
-        "on-error":        "#690005",
+        // ── Legacy color aliases — retargeted to V2 signal yellow ────────
+        "aj-orange":      "var(--aj-orange)",
+        "aj-orange-soft": "var(--aj-orange-soft)",
+        "aj-blue":        "var(--aj-blue)",
+        "aj-blue-bright": "var(--aj-blue-bright)",
+        "aj-gold":        "var(--aj-gold)",
       },
 
       borderRadius: {
-        DEFAULT: "1rem",  // 16px — base
-        md:  "1.5rem",    // 24px — inputs
-        lg:  "2rem",      // 32px — buttons
-        xl:  "3rem",      // 48px — large cards
-        full: "9999px",   // chips / pills
+        sm:     "6px",    // --r-sm
+        md:     "10px",   // --r-md
+        lg:     "16px",   // --r-lg
+        card:   "20px",   // --r-card
+        "2xl":  "20px",   // --r-card (alias)
+        panel:  "24px",   // --r-panel
+        full:   "9999px", // pills / chips
       },
 
       fontFamily: {
-        headline: ["Inter", "sans-serif"],
-        body:     ["Inter", "sans-serif"],
-        label:    ["Inter", "sans-serif"],
-        sans:     ["Inter", "sans-serif"],
+        headline: "var(--font-headline)",
+        accent:   "var(--font-accent)",
+        body:     "var(--font-body)",
+        mono:     "var(--font-mono)",
+        sans:     "var(--font-body)",
       },
 
       backgroundImage: {
-        "cinematic-gradient": "linear-gradient(135deg, #2b7ef8, #6aa5fb)",
-        "moment-gradient":    "linear-gradient(137.5deg, #2b7ef8, #f8a62b)",
+        "moment-gradient":    "linear-gradient(137.5deg, var(--signal-yellow), var(--accent-blue))",
       },
 
       boxShadow: {
         "ambient":       "0px 24px 48px rgba(0,0,0,0.4)",
-        "glow-primary":  "0 0 32px rgba(173,198,255,0.12)",
+        "glow-signal":   "var(--shadow-glow-signal)",
+        "glow-blue":     "var(--shadow-glow-blue)",
       },
     },
   },

@@ -196,18 +196,18 @@ export default function ContentSystemsMiamiPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-1">
       <JsonLd data={jsonLd} />
 
-      <section className="border-b border-neutral-900 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.24),_transparent_45%),linear-gradient(180deg,#05070a_0%,#000_100%)] px-6 pb-16 pt-28 sm:px-12 lg:px-24">
+      <section className="border-b border-border-subtle bg-[radial-gradient(circle_at_top,_rgba(232,255,90,0.12),_transparent_45%),linear-gradient(180deg,var(--surface-1)_0%,var(--bg-base)_100%)] px-5 pb-16 pt-28 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+          <p className="t-label mb-4">
             Content Systems Miami
           </p>
-          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+          <h1 className="t-h1 max-w-4xl">
             Content Systems in Miami That Turn One Recording Into 30+ Assets
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
+          <p className="mt-6 max-w-3xl t-lead text-fg-1">
             We help Miami-based businesses turn podcasts, videos, interviews,
             and founder content into repeatable content systems that build
             authority, traffic, and leads.
@@ -215,18 +215,18 @@ export default function ContentSystemsMiamiPage() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/apply"
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal"
             >
               Apply for a Strategy Session
             </Link>
             <Link
               href="/services/content-systems/"
-              className="inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-white transition-colors hover:border-neutral-500 hover:bg-neutral-900"
+              className="aj-btn-intel"
             >
               Explore Content Systems
             </Link>
           </div>
-          <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-neutral-400">
+          <div className="mt-6 flex flex-wrap gap-5 t-mono text-fg-2">
             <span>Built for serious operators</span>
             <span>Not random posting</span>
             <span>Systemized content engine</span>
@@ -234,12 +234,12 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What are content systems and why do Miami businesses need them?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             A content system turns one long-form recording into multiple usable
             assets across blogs, email, short-form video, and social channels.
             Content repurposing Miami businesses use well improves consistency,
@@ -249,12 +249,12 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             Who are content systems for in Miami?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             Content systems Miami businesses need most are usually tied to
             recurring messaging, founder knowledge, and not enough publishing
             bandwidth.
@@ -263,20 +263,20 @@ export default function ContentSystemsMiamiPage() {
             {audienceSegments.map((segment) => (
               <div
                 key={segment.title}
-                className="rounded-3xl border border-neutral-800 bg-black p-6"
+                className="aj-card"
               >
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="t-h4">
                   {segment.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-neutral-400">
-                  <strong className="text-white">Pain point:</strong> {segment.pain}
+                <p className="mt-4 t-small text-fg-2">
+                  <strong className="text-fg-0">Pain point:</strong> {segment.pain}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
-                  <strong className="text-white">What a system solves:</strong>{" "}
+                <p className="mt-3 t-small text-fg-2">
+                  <strong className="text-fg-0">What a system solves:</strong>{" "}
                   {segment.solve}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
-                  <strong className="text-white">Why AJ Digital fits:</strong>{" "}
+                <p className="mt-3 t-small text-fg-2">
+                  <strong className="text-fg-0">Why AJ Digital fits:</strong>{" "}
                   {segment.fit}
                 </p>
               </div>
@@ -285,25 +285,25 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What can one recording become?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             One strong recording can become a full content system when the
             extraction and publishing workflow is designed properly.
           </p>
-          <div className="mt-8 overflow-x-auto rounded-3xl border border-neutral-800">
-            <table className="min-w-full divide-y divide-neutral-800 text-left">
-              <thead className="bg-black">
-                <tr className="text-sm uppercase tracking-[0.2em] text-neutral-500">
+          <div className="mt-8 overflow-x-auto rounded-card border border-border-subtle">
+            <table className="min-w-full divide-y divide-[color:var(--border-subtle)] text-left">
+              <thead className="bg-bg-3">
+                <tr className="t-label">
                   <th className="px-5 py-4">Content input</th>
                   <th className="px-5 py-4">Repurposed assets</th>
                   <th className="px-5 py-4">Business outcome</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-neutral-800 bg-neutral-950 text-sm text-neutral-300">
+              <tbody className="divide-y divide-[color:var(--border-subtle)] bg-bg-2 text-sm text-fg-1">
                 {transformationRows.map((row) => (
                   <tr key={row[0]}>
                     {row.map((cell) => (
@@ -319,12 +319,12 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What does AJ Digital actually build for Miami clients?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AJ Digital builds the practical workflow behind content strategy
             Miami businesses need, not just more deliverables. We create
             systems that make content extraction, repurposing, and publishing
@@ -334,52 +334,52 @@ export default function ContentSystemsMiamiPage() {
             {buildExamples.map((example) => (
               <li
                 key={example}
-                className="rounded-2xl border border-neutral-800 bg-black px-5 py-4 text-neutral-300"
+                className="rounded-md border border-border-subtle bg-bg-2 px-5 py-4 text-fg-1"
               >
                 {example}
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-col gap-3 text-sm font-semibold text-blue-400">
-            <Link href="/services/content-systems/">
+          <div className="mt-8 flex flex-col gap-3 text-sm font-semibold text-fg-1">
+            <Link href="/services/content-systems/" className="hover:text-signal-yellow transition-colors">
               Explore the full content systems service
             </Link>
-            <Link href="/services/podcast-production/">
+            <Link href="/services/podcast-production/" className="hover:text-signal-yellow transition-colors">
               See how podcast production feeds the system
             </Link>
-            <Link href="/services/ai-consulting/">
+            <Link href="/services/ai-consulting/" className="hover:text-signal-yellow transition-colors">
               Understand the AI workflows behind content automation
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             How does our content systems process work?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             The AJ Digital Miami Content Systems Framework is built to turn
             founder knowledge into a repeatable publishing engine.
           </p>
-          <div className="mt-8 rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/30 to-neutral-950 p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+          <div className="mt-8 rounded-card border border-border-subtle border-l-[3px] border-l-signal-yellow bg-[linear-gradient(90deg,rgba(232,255,90,0.08),transparent),var(--surface-1)] p-8">
+            <p className="t-label">
               The AJ Digital Miami Content Systems Frameworkâ„¢
             </p>
             <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {frameworkSteps.map((step, index) => (
                 <div
                   key={step.title}
-                  className="rounded-2xl border border-neutral-800 bg-black/60 p-5"
+                  className="rounded-md border border-border-subtle bg-bg-3 p-5"
                 >
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+                  <p className="t-label !text-signal-yellow">
                     Step {index + 1}
                   </p>
-                  <h3 className="mt-3 text-xl font-semibold text-white">
+                  <h3 className="mt-3 t-h4">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-neutral-400">
+                  <p className="mt-3 t-small text-fg-2">
                     {step.copy}
                   </p>
                 </div>
@@ -389,18 +389,18 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             Why choose AJ Digital for content systems in Miami?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             AJ Digital is built for Miami and South Florida operators who need
             more than random social posting. Whether the team is in Miami-Dade,
             Hialeah, Brickell, Wynwood, Doral, Fort Lauderdale, or Boca Raton,
             the focus stays on systems, not disconnected deliverables.
           </p>
-          <div className="mt-8 space-y-4 text-neutral-300">
+          <div className="mt-8 space-y-4 text-fg-1">
             <p>
               We are not a generic content shop. We integrate podcast
               production, AI-assisted workflows, and content repurposing into a
@@ -415,55 +415,55 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-12 lg:px-24">
+      <section className="px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What kind of results can content systems create?
           </h2>
-          <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+          <p className="mt-4 max-w-4xl t-body-lg text-fg-1">
             Content systems create higher content velocity, better repurposing
             output, more consistency, stronger authority signals, and more
             entry points into offers.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="aj-card is-surface-2">
+              <h3 className="t-h4">
                 More output from the same source
               </h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">
+              <p className="mt-3 t-small text-fg-2">
                 A single recording can support 30 or more assets when the system
                 is designed well.
               </p>
             </div>
-            <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="aj-card is-surface-2">
+              <h3 className="t-h4">
                 Lower manual workload
               </h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">
+              <p className="mt-3 t-small text-fg-2">
                 Systems reduce how much founder or expert time gets spent
                 rewriting the same ideas repeatedly.
               </p>
             </div>
-            <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-6">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="aj-card is-surface-2">
+              <h3 className="t-h4">
                 Better use of expertise
               </h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">
+              <p className="mt-3 t-small text-fg-2">
                 More of the business&apos;s knowledge becomes visible, useful, and
                 connected to the offer.
               </p>
             </div>
           </div>
-          <div className="mt-8 flex flex-col gap-3 text-sm font-semibold text-blue-400">
-            <Link href="/apply">Apply for a strategy session</Link>
-            <Link href="/case-studies/podcast-authority-system/">
+          <div className="mt-8 flex flex-col gap-3 text-sm font-semibold text-fg-1">
+            <Link href="/apply" className="hover:text-signal-yellow transition-colors">Apply for a strategy session</Link>
+            <Link href="/case-studies/podcast-authority-system/" className="hover:text-signal-yellow transition-colors">
               See the podcast authority system case study
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-4 sm:px-12 lg:px-24">
+      <section className="px-5 py-4 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
           <InlineApplyCta
             eyebrow="Miami content system"
@@ -476,21 +476,21 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-5 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             Frequently Asked Questions
           </h2>
           <div className="mt-8 space-y-5">
             {faqItems.map((item) => (
               <div
                 key={item.question}
-                className="rounded-3xl border border-neutral-800 bg-black p-6"
+                className="aj-card"
               >
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="t-h4">
                   {item.question}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
+                <p className="mt-3 t-small text-fg-2">
                   {item.answer}
                 </p>
               </div>
@@ -499,39 +499,39 @@ export default function ContentSystemsMiamiPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/40 to-neutral-950 p-10 text-center">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+      <section className="px-5 py-20 sm:px-12 lg:px-24">
+        <div className="mx-auto max-w-4xl rounded-card border border-border-subtle bg-bg-2 p-10 text-center">
+          <h2 className="t-h2">
             Ready to turn your content into a real system?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">
+          <p className="mx-auto mt-4 max-w-2xl text-fg-1">
             Build a repeatable engine instead of chasing content week to week.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/apply"
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
+              className="aj-btn-signal"
             >
               Apply for a Strategy Session
             </Link>
             <Link
               href="/case-studies/"
-              className="inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-white transition-colors hover:border-neutral-500 hover:bg-neutral-900"
+              className="aj-btn-intel"
             >
               See proof
             </Link>
           </div>
-          <div className="mt-8 flex flex-col gap-2 text-sm font-semibold text-blue-400">
-            <Link href="/blog/content-repurposing-guide/">
+          <div className="mt-8 flex flex-col gap-2 text-sm font-semibold text-fg-1">
+            <Link href="/blog/content-repurposing-guide/" className="hover:text-signal-yellow transition-colors">
               Read the content repurposing guide
             </Link>
-            <Link href="/blog/content-repurposing-system/">
+            <Link href="/blog/content-repurposing-system/" className="hover:text-signal-yellow transition-colors">
               See the content repurposing system basics
             </Link>
-            <Link href="/blog/ai-content-automation-guide/">
+            <Link href="/blog/ai-content-automation-guide/" className="hover:text-signal-yellow transition-colors">
               Learn how AI content automation supports the workflow
             </Link>
-            <Link href="/blog/ai-tools-for-entrepreneurs/">
+            <Link href="/blog/ai-tools-for-entrepreneurs/" className="hover:text-signal-yellow transition-colors">
               Review the AI tools used in content automation
             </Link>
           </div>

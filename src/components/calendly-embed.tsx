@@ -15,7 +15,7 @@ export default function CalendlyEmbed({
 
   return (
     <div
-      className="overflow-hidden rounded-2xl border border-neutral-800 bg-black"
+      className="overflow-hidden rounded-2xl border border-border-subtle bg-bg-base"
       data-track="scheduler-embed-container"
       data-ga-event="scheduler_embed_view"
     >

@@ -15,9 +15,9 @@ export const mainNavConfig: NavItem[] = [
         description: "Studio-quality podcast systems for authority and growth.",
       },
       {
-        title: "AI Consulting",
+        title: "Marketing Operations",
         href: "/services/ai-consulting",
-        description: "Practical AI workflows to drastically scale content execution.",
+        description: "AI-powered content engine that turns your podcast into reach and authority.",
       },
       {
         title: "Content Systems",
@@ -85,7 +85,7 @@ export const mainNavConfig: NavItem[] = [
         href: "/podcast-production-miami",
       },
       {
-        title: "AI Consulting Miami",
+        title: "Marketing Operations Miami",
         href: "/ai-consulting-miami",
       },
       {

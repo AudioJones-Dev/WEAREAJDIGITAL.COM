@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how AJ Digital builds podcast production, AI consulting, and content systems for serious operators.",
+    "Learn how AJ Digital builds podcast production, Marketing Operations, and content systems for serious operators.",
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
         url: `${siteUrl}/about`,
         name: "About AJ Digital",
         description:
-          "AJ Digital builds authority systems through podcast production, AI consulting, and content operations.",
+          "AJ Digital builds authority systems through podcast production, Marketing Operations, and content systems.",
       },
       buildOrganizationJsonLd(),
       buildBreadcrumbJsonLd([
@@ -48,7 +48,7 @@ export default function AboutPage() {
         "Build a flagship show that becomes the source asset for your authority engine.",
     },
     {
-      title: "AI Consulting",
+      title: "Marketing Operations",
       href: "/services/ai-consulting",
       description:
         "Install practical workflows that reclaim time and improve operational throughput.",
@@ -62,19 +62,20 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-bg-0 text-fg-1">
       <JsonLd data={jsonLd} />
 
-      <section className="border-b border-neutral-900 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.22),_transparent_45%),linear-gradient(180deg,#05070a_0%,#000_100%)] px-6 pb-16 pt-28 sm:px-12 lg:px-24">
+      <section className="aj-bg-signal-control-room border-b border-border-subtle px-6 pb-16 pt-28 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+          <p className="t-label mb-4">
+            <span className="aj-signal-line" aria-hidden="true" />
             About AJ Digital
           </p>
-          <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white md:text-6xl">
+          <h1 className="t-h1 max-w-4xl">
             We build authority systems for businesses that want leverage, not
             more noise.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
+          <p className="t-lead mt-6 max-w-3xl text-fg-2">
             AJ Digital operates at the intersection of podcast production, AI
             implementation, and content operations. The goal is simple: create
             infrastructure that turns expertise into consistent demand.
@@ -84,11 +85,11 @@ export default function AboutPage() {
 
       <section className="px-6 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
-            <h2 className="text-2xl font-semibold text-white md:text-3xl">
+          <div className="aj-card p-8">
+            <h2 className="t-h3">
               Why the agency exists
             </h2>
-            <div className="mt-6 space-y-5 text-neutral-300">
+            <div className="mt-6 space-y-5 t-body text-fg-2">
               <p>
                 Most operators do not need more disconnected deliverables. They
                 need a repeatable way to extract expertise, distribute it
@@ -103,14 +104,14 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
-            <h2 className="text-2xl font-semibold text-white md:text-3xl">
+          <div className="aj-card p-8">
+            <h2 className="t-h3">
               Operating principles
             </h2>
-            <ul className="mt-6 space-y-4 text-neutral-300">
+            <ul className="mt-6 space-y-4 t-body text-fg-2">
               {principles.map((principle) => (
                 <li key={principle} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-blue-500" />
+                  <span className="mt-2 h-2 w-2 rounded-full bg-signal-yellow" />
                   <span>{principle}</span>
                 </li>
               ))}
@@ -119,9 +120,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-900 bg-neutral-950 px-6 py-16 sm:px-12 lg:px-24">
+      <section className="border-y border-border-subtle bg-bg-1 px-6 py-16 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="t-h2">
             What we build
           </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -129,14 +130,16 @@ export default function AboutPage() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="rounded-3xl border border-neutral-800 bg-black p-6 transition-colors hover:border-blue-500/50"
+                className="aj-card-signal"
               >
-                <h3 className="text-xl font-semibold text-white">
-                  {service.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-400">
-                  {service.description}
-                </p>
+                <div className="aj-card-inner">
+                  <h3 className="t-h4">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 t-small text-fg-2">
+                    {service.description}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
@@ -144,25 +147,19 @@ export default function AboutPage() {
       </section>
 
       <section className="px-6 py-20 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/40 to-neutral-950 p-10 text-center">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+        <div className="aj-card mx-auto max-w-4xl border-[color:var(--line-signal)] p-10 text-center">
+          <h2 className="t-h2">
             Ready to build the system behind your content?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">
+          <p className="t-body-lg mx-auto mt-4 max-w-2xl text-fg-2">
             Start with a strategy session. We will map the highest-leverage
-            path across podcast production, AI consulting, or content systems.
+            path across podcast production, Marketing Operations, or content systems.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href="/apply"
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
-            >
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:items-center">
+            <Link href="/apply" className="aj-btn-signal">
               Apply for a Strategy Session
             </Link>
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center justify-center rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-white transition-colors hover:border-neutral-500 hover:bg-neutral-900"
-            >
+            <Link href="/case-studies" className="aj-btn-intel">
               Review Case Studies
             </Link>
           </div>

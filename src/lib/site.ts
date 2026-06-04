@@ -51,7 +51,7 @@ export function buildOrganizationJsonLd() {
       url: `${siteUrl}/logo.png`,
     },
     description:
-      "Podcast production, AI consulting, and content systems for operator-led businesses.",
+      "Podcast production, Marketing Operations, and content systems for operator-led businesses.",
   };
 }
 
