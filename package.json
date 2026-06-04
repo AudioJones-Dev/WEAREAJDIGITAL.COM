@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "doppler run -- next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "doppler run -- next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "sanity:dev": "sanity dev",
+    "sanity:dev": "doppler run -- sanity dev",
     "sanity:build": "sanity build"
   },
   "dependencies": {

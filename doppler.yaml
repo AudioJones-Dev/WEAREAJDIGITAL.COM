@@ -1,0 +1,7 @@
+# Doppler repo config — links this directory to the Doppler project.
+# Run `doppler setup` once to activate (auto-selects project + config below).
+# Secrets are injected at runtime via `doppler run --` (see package.json scripts).
+# Docs: https://docs.doppler.com/docs/cli
+setup:
+  project: weareajdigital-com
+  config: dev
